@@ -1,0 +1,20 @@
+# Artefatos de build / rascunho (NÃO versionar)
+/_review/
+/_frames_raw/
+output/_shots/
+_cv_*.png
+_cv_img_*.jpeg
+_cursos_*.png
+_pdfcheck_*.png
+_curriculo_texto.txt
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini

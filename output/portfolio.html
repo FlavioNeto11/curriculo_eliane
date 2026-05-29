@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Portfólio · Eliane Souza Ferreira — Síndica Profissional</title>
+<link rel="stylesheet" href="assets/fonts.css">
+<style>
+:root{
+  --paper:#F6F3ED;
+  --paper-2:#EFEAE0;
+  --white:#FFFFFF;
+  --ink:#23282E;
+  --ink-soft:#535962;
+  --ink-mute:#7C828B;
+  --petrol:#11414A;
+  --petrol-2:#0B2B31;
+  --petrol-deep:#082025;
+  --gold:#B08A4E;
+  --gold-2:#C7A56B;
+  --gold-soft:#D8C49A;
+  --line:#E0D9CC;
+  --line-2:#D2CABA;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+html,body{background:#3a3a3a;}
+body{font-family:'Montserrat',sans-serif;color:var(--ink);font-size:10.5pt;line-height:1.5;}
+@page{size:A4;margin:0;}
+
+.page{
+  position:relative;width:210mm;height:297mm;overflow:hidden;
+  background:var(--paper);page-break-after:always;break-after:page;
+}
+.page:last-child{page-break-after:auto;break-after:auto;}
+.pad{padding:18mm 18mm 16mm 18mm;height:100%;position:relative;}
+
+/* Typography helpers */
+.serif{font-family:'Cormorant Garamond',Georgia,serif;}
+.eyebrow{font-size:8.5pt;letter-spacing:.34em;text-transform:uppercase;font-weight:600;color:var(--gold);}
+.eyebrow.light{color:var(--gold-2);}
+h1,h2,h3,h4{font-weight:600;line-height:1.1;}
+p{color:var(--ink-soft);}
+.lead{font-size:11pt;line-height:1.62;color:var(--ink-soft);}
+
+/* Section header (content pages) */
+.sec-head{display:flex;align-items:flex-start;gap:10mm;margin-bottom:9mm;}
+.sec-num{font-family:'Cormorant Garamond',serif;font-size:34pt;font-weight:600;color:var(--gold);line-height:.8;}
+.sec-head .meta{flex:1;}
+.sec-label{font-size:8.5pt;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-mute);font-weight:600;}
+.sec-title{font-family:'Cormorant Garamond',serif;font-size:27pt;font-weight:600;color:var(--petrol);margin-top:2mm;letter-spacing:.2px;}
+.sec-sub{font-size:10pt;color:var(--gold);font-weight:600;letter-spacing:.06em;margin-top:1mm;text-transform:uppercase;}
+.rule{height:2px;width:18mm;background:var(--gold);border:none;margin:3mm 0;}
+
+/* Footer */
+.footer{position:absolute;left:18mm;right:18mm;bottom:9mm;display:flex;justify-content:space-between;
+  align-items:center;font-size:7.3pt;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-mute);
+  border-top:1px solid var(--line);padding-top:2.6mm;}
+.footer .dot{color:var(--gold);}
+
+/* ============ COVER ============ */
+.cover{background:var(--petrol-deep);}
+.cover .photo{position:absolute;top:0;left:0;right:0;height:60%;
+  background-image:url('assets/cover.jpg');background-size:cover;background-position:center 32%;}
+.cover .photo::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(8,32,37,.34) 0%,rgba(8,32,37,.06) 22%,rgba(8,32,37,0) 55%,rgba(8,32,37,.40) 100%);}
+.cover .seam{position:absolute;top:60%;left:0;right:0;height:2.4px;background:var(--gold);transform:translateY(-1.2px);z-index:3;}
+.cover .frame{position:absolute;inset:10mm;border:1px solid rgba(216,196,154,.5);z-index:4;pointer-events:none;}
+.cover .frame::after{content:"";position:absolute;inset:2.4mm;border:1px solid rgba(216,196,154,.2);}
+.cover .top{position:absolute;top:10mm;left:10mm;right:10mm;padding:7mm 8mm;display:flex;
+  justify-content:space-between;align-items:center;z-index:3;}
+.cover .top .brand{font-size:8.5pt;letter-spacing:.36em;text-transform:uppercase;color:#fff;font-weight:600;text-shadow:0 1px 6px rgba(0,0,0,.4);}
+.cover .top .yr{font-size:8.5pt;letter-spacing:.28em;color:rgba(255,255,255,.9);font-weight:500;text-shadow:0 1px 6px rgba(0,0,0,.4);}
+.cover .text{position:absolute;top:60%;left:10mm;right:10mm;bottom:10mm;z-index:3;
+  display:flex;flex-direction:column;justify-content:center;padding:0 14mm;}
+.cover .kick{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15pt;color:var(--gold-2);margin-bottom:5mm;letter-spacing:.3px;}
+.cover .name{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:52pt;line-height:.98;color:#fff;letter-spacing:.5px;}
+.cover .gline{height:2px;width:34mm;background:var(--gold);margin:7mm 0 6mm;}
+.cover .role{font-size:13pt;letter-spacing:.44em;text-transform:uppercase;color:#fff;font-weight:600;}
+.cover .sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15.5pt;line-height:1.4;color:rgba(255,255,255,.86);margin-top:7mm;max-width:150mm;}
+
+/* ============ APRESENTAÇÃO ============ */
+.intro-grid{display:flex;gap:11mm;margin-top:1mm;}
+.intro-main{flex:1.55;}
+.intro-main .big{font-family:'Cormorant Garamond',serif;font-size:23pt;line-height:1.16;color:var(--petrol);font-weight:600;margin-bottom:6mm;}
+.intro-main p{margin-bottom:3.6mm;line-height:1.66;}
+.intro-main .drop::first-letter{font-family:'Cormorant Garamond',serif;font-size:30pt;float:left;line-height:.82;
+  padding:1.5mm 2.4mm 0 0;color:var(--gold);font-weight:600;}
+.pullquote{margin-top:6mm;padding-left:7mm;border-left:2px solid var(--gold);
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15pt;line-height:1.4;color:var(--petrol);}
+.stats{flex:1;background:var(--petrol);color:#fff;border-radius:2px;padding:11mm 9mm;align-self:stretch;
+  display:flex;flex-direction:column;justify-content:center;gap:8.5mm;position:relative;}
+.stats::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--gold);}
+.stat .n{font-family:'Cormorant Garamond',serif;font-size:33pt;font-weight:600;color:var(--gold-2);line-height:.85;}
+.stat .t{font-size:8.6pt;letter-spacing:.04em;color:rgba(255,255,255,.86);margin-top:2.4mm;line-height:1.42;}
+.stat .t strong{color:#fff;font-weight:600;}
+.stats .sdiv{height:1px;background:rgba(255,255,255,.16);}
+
+/* ============ FLAGSHIP CARDS ============ */
+.flagcards{display:flex;flex-direction:column;gap:5mm;margin-top:1mm;}
+.fcard{display:flex;background:var(--white);border:1px solid var(--line);border-radius:2px;overflow:hidden;
+  box-shadow:0 1px 0 rgba(0,0,0,.02);}
+.fcard .badge{flex:0 0 42mm;background:var(--petrol);color:#fff;padding:6mm 6mm;display:flex;flex-direction:column;
+  justify-content:center;position:relative;}
+.fcard .badge::after{content:"";position:absolute;right:0;top:14%;bottom:14%;width:2px;background:var(--gold);}
+.fcard .badge .bn{font-family:'Cormorant Garamond',serif;font-size:23pt;font-weight:600;color:var(--gold-2);line-height:.9;}
+.fcard .badge .bl{font-size:7.6pt;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.82);margin-top:2.2mm;font-weight:500;}
+.fcard .body{flex:1;padding:5.4mm 7mm;}
+.fcard .body .role{font-size:7.8pt;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-weight:600;}
+.fcard .body h3{font-family:'Cormorant Garamond',serif;font-size:17pt;color:var(--petrol);margin:1mm 0 2mm;font-weight:600;}
+.fcard .body p{font-size:9pt;line-height:1.44;color:var(--ink-soft);}
+.tags{display:flex;flex-wrap:wrap;gap:2mm;margin-top:3mm;}
+.tag{font-size:7.4pt;letter-spacing:.08em;text-transform:uppercase;color:var(--petrol);background:var(--paper-2);
+  border:1px solid var(--line-2);border-radius:30px;padding:1.4mm 3mm;font-weight:600;}
+
+/* ============ TIMELINE ============ */
+.tl{position:relative;margin-top:2mm;padding-left:8mm;}
+.tl::before{content:"";position:absolute;left:1.4mm;top:2mm;bottom:2mm;width:1.5px;background:var(--line-2);}
+.tlitem{position:relative;padding:0 0 6.5mm 0;}
+.tlitem:last-child{padding-bottom:0;}
+.tlitem::before{content:"";position:absolute;left:-8mm;top:1.2mm;width:3.4mm;height:3.4mm;border-radius:50%;
+  background:var(--gold);box-shadow:0 0 0 2.4px var(--paper),0 0 0 3.4px var(--line-2);transform:translateX(-.4mm);}
+.tlitem .yr{font-size:8.4pt;letter-spacing:.14em;color:var(--gold);font-weight:700;}
+.tlitem h4{font-family:'Cormorant Garamond',serif;font-size:15.5pt;color:var(--petrol);font-weight:600;margin:.6mm 0 .4mm;}
+.tlitem .rolelab{font-size:8.2pt;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-mute);font-weight:600;margin-bottom:1.6mm;}
+.tlitem p{font-size:9.2pt;line-height:1.46;color:var(--ink-soft);}
+
+/* ============ COURSES ============ */
+.crow{display:flex;gap:6mm;margin-bottom:6mm;}
+.ccard{background:var(--white);border:1px solid var(--line);border-radius:2px;padding:7mm 7.5mm;position:relative;flex:1;}
+.ccard .yrbadge{position:absolute;top:6mm;right:7mm;font-family:'Cormorant Garamond',serif;font-size:20pt;
+  color:var(--gold);font-weight:600;line-height:1;}
+.ccard .prov{font-size:8pt;letter-spacing:.26em;text-transform:uppercase;color:var(--ink-mute);font-weight:600;}
+.ccard h3{font-family:'Cormorant Garamond',serif;font-size:18pt;color:var(--petrol);font-weight:600;margin:1mm 0 4mm;}
+.modlist{column-count:2;column-gap:7mm;}
+.modlist.one{column-count:1;}
+.modlist li{list-style:none;font-size:9pt;color:var(--ink-soft);padding:1.2mm 0 1.2mm 5mm;position:relative;
+  break-inside:avoid;line-height:1.3;}
+.modlist li::before{content:"";position:absolute;left:0;top:2.5mm;width:2.2mm;height:2.2mm;border:1.4px solid var(--gold);
+  transform:rotate(45deg);}
+.palestras li{list-style:none;font-size:8.9pt;color:var(--ink-soft);padding:2.4mm 0 2.4mm 6mm;position:relative;
+  border-bottom:1px solid var(--line);line-height:1.4;}
+.palestras li:last-child{border-bottom:none;}
+.palestras li::before{content:"";position:absolute;left:0;top:3.4mm;width:2.4mm;height:2.4mm;border-radius:50%;background:var(--gold);}
+.palestras li strong{color:var(--petrol);font-weight:600;}
+
+/* ============ OBRAS / BEFORE-AFTER ============ */
+.obra-intro{font-size:10pt;line-height:1.55;color:var(--ink-soft);margin-bottom:7mm;max-width:165mm;}
+.ba{display:flex;gap:5mm;}
+.ba .item{flex:1;position:relative;}
+.ba .img{width:100%;background-size:cover;background-position:center;border-radius:2px;}
+.ba .img.h-land{height:60mm;}
+.ba .img.h-port{height:82mm;}
+.ba-tag{position:absolute;top:0;left:0;font-size:7.6pt;letter-spacing:.2em;text-transform:uppercase;
+  font-weight:700;color:#fff;padding:1.7mm 4mm;}
+.tag-antes{background:rgba(11,43,49,.92);}
+.tag-depois{background:var(--gold);}
+.ba-cap{display:flex;align-items:center;gap:3mm;margin:3.2mm 0 0;font-size:9.4pt;color:var(--petrol);font-weight:600;
+  letter-spacing:.02em;}
+.ba-cap::before{content:"";width:5mm;height:2px;background:var(--gold);flex:0 0 auto;}
+.ba-cap .desc{color:var(--ink-mute);font-weight:500;font-size:8.6pt;letter-spacing:.01em;}
+.ba-block{margin-bottom:8mm;}
+.ba-block:last-child{margin-bottom:0;}
+
+/* action shot */
+.action{position:relative;border-radius:2px;overflow:hidden;height:120mm;margin-bottom:7mm;}
+.action img{width:100%;height:100%;object-fit:cover;object-position:center 28%;}
+.action .ov{position:absolute;left:0;right:0;bottom:0;padding:20mm 9mm 7mm;
+  background:linear-gradient(0deg,rgba(7,28,32,.95) 0%,rgba(7,28,32,.85) 38%,rgba(8,32,37,.4) 75%,rgba(8,32,37,0) 100%);}
+.action .ov .t{color:#fff;font-family:'Cormorant Garamond',serif;font-size:16pt;font-weight:600;}
+.action .ov .s{color:var(--gold-2);font-size:8.4pt;letter-spacing:.16em;text-transform:uppercase;margin-bottom:1.5mm;font-weight:600;}
+
+/* showcase grid */
+.show-grid{display:grid;grid-template-columns:1fr 1fr;gap:5mm;}
+.show-grid.g4{grid-template-columns:1fr 1fr;}
+.scell{position:relative;border-radius:2px;overflow:hidden;height:57mm;}
+.scell img{width:100%;height:100%;object-fit:cover;}
+.scell .cap{position:absolute;left:0;bottom:0;right:0;padding:7mm 4mm 2.6mm;
+  background:linear-gradient(0deg,rgba(8,32,37,.82),rgba(8,32,37,0));
+  color:#fff;font-size:8pt;letter-spacing:.06em;font-weight:600;}
+.note{font-size:7.8pt;color:var(--ink-mute);font-style:italic;margin-top:5mm;display:flex;align-items:center;gap:2.5mm;}
+.note::before{content:"";width:4mm;height:1px;background:var(--gold);}
+
+/* ============ OUTRAS FRENTES ============ */
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:5mm;margin-top:1mm;}
+.fitem{background:var(--white);border:1px solid var(--line);border-radius:2px;padding:6mm 6.5mm;display:flex;gap:5mm;align-items:flex-start;}
+.fitem .ic{flex:0 0 12mm;height:12mm;border-radius:50%;background:var(--paper-2);border:1px solid var(--line-2);
+  display:flex;align-items:center;justify-content:center;}
+.fitem .ic svg{width:6.2mm;height:6.2mm;stroke:var(--petrol);fill:none;stroke-width:1.6;}
+.fitem h4{font-size:10.5pt;color:var(--petrol);font-weight:600;margin-bottom:1.4mm;letter-spacing:.01em;}
+.fitem p{font-size:8.5pt;line-height:1.42;color:var(--ink-soft);}
+
+/* ============ DIFERENCIAIS ============ */
+.diffs{margin-top:2mm;}
+.diff{display:flex;gap:7mm;align-items:flex-start;padding:6.5mm 0;border-bottom:1px solid var(--line);}
+.diff:last-child{border-bottom:none;}
+.diff .dn{font-family:'Cormorant Garamond',serif;font-size:30pt;font-weight:600;color:var(--gold);line-height:.8;flex:0 0 16mm;}
+.diff .dc h4{font-family:'Cormorant Garamond',serif;font-size:16pt;color:var(--petrol);font-weight:600;margin-bottom:1.6mm;}
+.diff .dc p{font-size:9.4pt;line-height:1.5;color:var(--ink-soft);max-width:135mm;}
+
+/* ============ CLOSING ============ */
+.closing{background:var(--petrol-deep);}
+.closing .bgtex{position:absolute;inset:0;background:
+  radial-gradient(120% 80% at 50% 0%,rgba(176,138,78,.16),transparent 60%),
+  linear-gradient(180deg,var(--petrol-2),var(--petrol-deep));}
+.closing .frame{position:absolute;inset:11mm;border:1px solid rgba(216,196,154,.4);}
+.closing .inner{position:absolute;inset:11mm;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;text-align:center;padding:18mm;}
+.closing .mk{font-family:'Cormorant Garamond',serif;font-size:46pt;color:var(--gold);line-height:.4;height:8mm;}
+.closing .eb{font-size:8.5pt;letter-spacing:.36em;text-transform:uppercase;color:var(--gold-soft);font-weight:600;margin-bottom:9mm;}
+.closing .quote{font-family:'Cormorant Garamond',serif;font-size:27pt;line-height:1.28;color:#fff;font-weight:500;max-width:150mm;}
+.closing .quote em{color:var(--gold-2);font-style:italic;}
+.closing .gline{height:2px;width:30mm;background:var(--gold);margin:11mm 0;}
+.closing .who{font-family:'Cormorant Garamond',serif;font-size:21pt;color:#fff;font-weight:600;}
+.closing .role{font-size:9pt;letter-spacing:.34em;text-transform:uppercase;color:var(--gold-2);margin-top:2mm;font-weight:600;}
+.contact{display:flex;gap:11mm;margin-top:11mm;}
+.contact .ci{display:flex;align-items:center;gap:3mm;color:rgba(255,255,255,.92);font-size:9.5pt;letter-spacing:.04em;}
+.contact .ci svg{width:5mm;height:5mm;stroke:var(--gold-2);fill:none;stroke-width:1.6;}
+.contact-note{margin-top:9mm;font-size:7.6pt;color:rgba(255,255,255,.5);letter-spacing:.14em;text-transform:uppercase;}
+</style>
+</head>
+<body>
+
+<!-- ================= 1. CAPA ================= -->
+<section class="page cover">
+  <div class="photo"></div>
+  <div class="seam"></div>
+  <div class="frame"></div>
+  <div class="top">
+    <span class="brand">Portfólio Profissional</span>
+    <span class="yr">Gestão Condominial</span>
+  </div>
+  <div class="text">
+    <div class="kick">Apresentação profissional</div>
+    <div class="name">Eliane<br>Souza Ferreira</div>
+    <div class="gline"></div>
+    <div class="role">Síndica Profissional</div>
+    <div class="sub">Gestão condominial com experiência, transparência<br>e foco em valorização patrimonial.</div>
+  </div>
+</section>
+
+<!-- ================= 2. APRESENTAÇÃO ================= -->
+<section class="page">
+  <div class="pad">
+    <div class="sec-head">
+      <div class="sec-num">01</div>
+      <div class="meta">
+        <div class="sec-label">Apresentação</div>
+        <div class="sec-title">Quem conduz a gestão</div>
+        <hr class="rule">
+      </div>
+    </div>
+    <div class="intro-grid">
+      <div class="intro-main">
+        <div class="big">Uma administração próxima, transparente e comprometida com o patrimônio.</div>
+        <p class="drop">Eliane Souza Ferreira atua como Síndica Profissional com trajetória consolidada em gestão condominial e ampla vivência em administração, operações e gestão de pessoas. Seu trabalho é orientado pela proximidade: o contato direto com cada morador constrói a confiança e a transparência de uma administração aberta, em que todos podem participar e contribuir.</p>
+        <p>Com atenção permanente à saúde financeira do condomínio, conduz uma gestão de despesas planejadas e equilibradas — que cabem no orçamento dos condôminos e mantêm o patrimônio valorizado e bem cuidado.</p>
+        <p>Da rotina administrativa ao acompanhamento de obras e manutenções, do relacionamento com fornecedores à condução de assembleias, sua atuação une organização, responsabilidade e compromisso com resultados concretos.</p>
+        <div class="pullquote">“Um condomínio saudável nasce de uma gestão planejada, próxima das pessoas e transparente em cada decisão.”</div>
+      </div>
+      <div class="stats">
+        <div class="stat"><div class="n">+20</div><div class="t"><strong>anos</strong> de atuação profissional em gestão, operações e administração</div></div>
+        <div class="sdiv"></div>
+        <div class="stat"><div class="n">10</div><div class="t"><strong>anos</strong> à frente do Condomínio Ulisses dos Santos Ribeiro</div></div>
+        <div class="sdiv"></div>
+        <div class="stat"><div class="n">2017</div><div class="t">síndica do <strong>Parque Amarige</strong> desde então — atuação atual</div></div>
+        <div class="sdiv"></div>
+        <div class="stat"><div class="n">04</div><div class="t"><strong>mandatos</strong> no Condomínio Shopping do Carmo</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="footer"><span>Eliane Souza Ferreira <span class="dot">·</span> Síndica Profissional</span><span>02</span></div>
+</section>
+
+<!-- ================= 3. EXPERIÊNCIA CONDOMINIAL ================= -->
+<section class="page">
+  <div class="pad">
+    <div class="sec-head">
+      <div class="sec-num">02</div>
+      <div class="meta">
+        <div class="sec-label">Experiência</div>
+        <div class="sec-title">Experiência em gestão condominial</div>
+        <hr class="rule">
+      </div>
+    </div>
+    <p class="lead" style="margin-bottom:6mm;max-width:162mm;">Atuação contínua à frente de condomínios de grande responsabilidade, com gestão administrativa, financeira e operacional orientada à conservação e à valorização do patrimônio.</p>
+    <div class="flagcards">
+      <div class="fcard">
+        <div class="badge"><div class="bn">Desde<br>2017</div><div class="bl">Atuação atual</div></div>
+        <div class="body">
+          <div class="role">Síndica Profissional</div>
+          <h3>Condomínio Parque Amarige</h3>
+          <p>Responsável pela operação e pelo suporte técnico, com supervisão de serviços terceirizados e contato direto com os condôminos. Conduz o treinamento de equipes e o planejamento das manutenções prediais, zelando pela convivência harmoniosa.</p>
+          <div class="tags"><span class="tag">Operação</span><span class="tag">Manutenção predial</span><span class="tag">Relacionamento</span></div>
+        </div>
+      </div>
+      <div class="fcard">
+        <div class="badge"><div class="bn">04</div><div class="bl">Mandatos</div></div>
+        <div class="body">
+          <div class="role">Síndica Profissional</div>
+          <h3>Condomínio Shopping do Carmo</h3>
+          <p>Confiança renovada ao longo de quatro mandatos. Responsável pela manutenção interna e externa, pelos pagamentos e pelo planejamento, assegurando continuidade administrativa e cuidado com as áreas comuns.</p>
+          <div class="tags"><span class="tag">Continuidade</span><span class="tag">Manutenção</span><span class="tag">Planejamento</span></div>
+        </div>
+      </div>
+      <div class="fcard">
+        <div class="badge"><div class="bn">10</div><div class="bl">Anos de atuação</div></div>
+        <div class="body">
+          <div class="role">Síndica Profissional</div>
+          <h3>Condomínio Ulisses dos Santos Ribeiro</h3>
+          <p>Uma década à frente da gestão, com foco em organização administrativa, conservação das áreas comuns e relacionamento próximo com os moradores — base de uma administração estável e de confiança.</p>
+          <div class="tags"><span class="tag">Gestão</span><span class="tag">Conservação</span><span class="tag">Transparência</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer"><span>Eliane Souza Ferreira <span class="dot">·</span> Síndica Profissional</span><span>03</span></div>
+</section>
+
+<!-- ================= 4. TRAJETÓRIA ================= -->
+<section class="page">
+  <div class="pad">
+    <div class="sec-head">
+      <div class="sec-num">03</div>
+      <div class="meta">
+        <div class="sec-label">Trajetória</div>
+        <div class="sec-title">Trajetória profissional</div>
+        <hr class="rule">
+      </div>
+    </div>
+    <p class="lead" style="margin-bottom:7mm;max-width:165mm;">Uma base sólida construída em gestão, operações, administração e atendimento — competências que sustentam a atuação como síndica profissional.</p>
+    <div class="tl">
+      <div class="tlitem">
+        <div class="yr">2000 — 2008</div>
+        <h4>COCISA</h4>
+        <div class="rolelab">Síndica</div>
+        <p>Responsável por toda a parte operacional e técnica do local, pela gestão de pessoas e pelos recursos humanos.</p>
+      </div>
+      <div class="tlitem">
+        <div class="yr">2006 — 2008</div>
+        <h4>Essencial Nutrição</h4>
+        <div class="rolelab">Gerente Operacional Júnior por Competências</div>
+        <p>Gestão das refeições das unidades (Escandinávia, em Araraquara, e Syngenta, em Matão): cotações e compras de matérias-primas, treinamento de funcionários, atendimento ao cliente, controle de temperaturas, manutenção e conservação dos estabelecimentos e fechamento de folha de pagamento.</p>
+      </div>
+      <div class="tlitem">
+        <div class="yr">2008 — 2009</div>
+        <h4>Grupo Stuchi</h4>
+        <div class="rolelab">Auxiliar Administrativo</div>
+        <p>Locação e venda, contratos, vistorias e contato direto com clientes. Responsável pelos porteiros e equipes de limpeza dos condomínios administrados.</p>
+      </div>
+      <div class="tlitem">
+        <div class="yr">2010 — 2016</div>
+        <h4>Dabeana Serviços</h4>
+        <div class="rolelab">Proprietária</div>
+        <p>Atendimento ao cliente, venda de serviços, contratos entre empresas e treinamento de equipes.</p>
+      </div>
+      <div class="tlitem">
+        <div class="yr">2013 — 2020</div>
+        <h4>Dabeana Nutrição</h4>
+        <div class="rolelab">Proprietária</div>
+        <p>Atendimento ao cliente, supervisão e treinamento em guias de boas práticas, gestão de recursos humanos e distribuição dos serviços operacionais.</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer"><span>Eliane Souza Ferreira <span class="dot">·</span> Síndica Profissional</span><span>04</span></div>
+</section>
+
+<!-- ================= 5. FORMAÇÃO E CURSOS ================= -->
+<section class="page">
+  <div class="pad">
+    <div class="sec-head">
+      <div class="sec-num">04</div>
+      <div class="meta">
+        <div class="sec-label">Capacitação</div>
+        <div class="sec-title">Formação, cursos e capacitações</div>
+        <hr class="rule">
+      </div>
+    </div>
+    <div class="ccard" style="margin-bottom:6mm;">
+      <div class="yrbadge">2021</div>
+      <div class="prov">Curso · Sindiconet</div>
+      <h3>Gestão condominial — formação completa</h3>
+      <ul class="modlist">
+        <li>Gestão Condominial</li>
+        <li>Legislação I, II e III</li>
+        <li>Implantação de Condomínio</li>
+        <li>Segurança em Condomínio</li>
+        <li>Gestão Financeira</li>
+        <li>Gestão de Recursos Humanos I e II</li>
+        <li>Sustentabilidade</li>
+        <li>Condomínio Clube</li>
+        <li>Manutenção Predial</li>
+        <li>Assembleia</li>
+      </ul>
+    </div>
+    <div class="crow">
+      <div class="ccard">
+        <div class="yrbadge">2017</div>
+        <div class="prov">Curso · Sebrae</div>
+        <h3>Gestão e planejamento</h3>
+        <ul class="modlist one">
+          <li>Gestão Financeira</li>
+          <li>Planejamento Financeiro</li>
+        </ul>
+      </div>
+      <div class="ccard">
+        <div class="yrbadge">2022</div>
+        <div class="prov">Café com Síndico</div>
+        <h3>Atualização contínua</h3>
+        <p style="font-size:8.8pt;color:var(--ink-soft);line-height:1.46;">Participação no ciclo de palestras e debates voltados à gestão condominial, com temas atuais sobre legislação, finanças, segurança e administração.</p>
+      </div>
+    </div>
+    <div class="ccard">
+      <div class="prov">2022 · Palestras — Café com Síndico</div>
+      <h3 style="margin-bottom:2.5mm;">Temas e especialistas</h3>
+      <ul class="palestras">
+        <li><strong>Dr. Rodrigo Karpat</strong> — Questões recorrentes da vida em condomínio e as grandes polêmicas da vida condominial.</li>
+        <li><strong>Comgás (Ronaldo Andreos)</strong> — Benefícios do gás natural para o meio ambiente e para o seu condomínio.</li>
+        <li><strong>Campseg · Auto Defesa Brasil</strong> — Gestão integrada dos serviços para condomínio.</li>
+        <li><strong>Administradora Puiatti (Guilherme Gomes)</strong> — Gerenciamento de riscos na administração de condomínios.</li>
+        <li><strong>Superlógica (Dra. Elisângela Thomazini)</strong> — Inadimplência zero: a solução para a inadimplência condominial.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer"><span>Eliane Souza Ferreira <span class="dot">·</span> Síndica Profissional</span><span>05</span></div>
+</section>
+
+<!-- ================= 6. OBRAS — PARQUE AMARIGE (1) ================= -->
+<section class="page">
+  <div class="pad">
+    <div class="sec-head">
+      <div class="sec-num">05</div>
+      <div class="meta">
+        <div class="sec-label">Obras e Melhorias Realizadas</div>
+        <div class="sec-title">Transformações que valorizam</div>
+        <div class="sec-sub">Condomínio Parque Amarige</div>
+      </div>
+    </div>
+    <p class="obra-intro">Registros de obras e melhorias acompanhadas de perto — do diagnóstico à entrega — com foco em conservação, segurança e valorização das áreas comuns.</p>
+    <div class="ba-block">
+      <div class="ba">
+        <div class="item"><div class="img h-port" style="background-image:url('assets/pa_paisagismo_antes.jpg')"><span class="ba-tag tag-antes">Antes</span></div></div>
+        <div class="item"><div class="img h-port" style="background-image:url('assets/pa_paisagismo_depois.jpg')"><span class="ba-tag tag-depois">Depois</span></div></div>
+      </div>
+      <div class="ba-cap">Revitalização paisagística de área comum <span class="desc">— recuperação e tratamento de jardim</span></div>
+    </div>
+    <div class="ba-block">
+      <div class="ba">
+        <div class="item"><div class="img h-port" style="background-image:url('assets/pa_fachada_antes.jpg');background-position:center 22%"><span class="ba-tag tag-antes">Antes</span></div></div>
+        <div class="item"><div class="img h-port" style="background-image:url('assets/pa_fachada_depois.jpg')"><span class="ba-tag tag-depois">Depois</span></div></div>
+      </div>
+      <div class="ba-cap">Pintura e conservação de fachada <span class="desc">— modernização visual e proteção da estrutura</span></div>
+    </div>
+  </div>
+  <div class="footer"><span>Eliane Souza Ferreira <span class="dot">·</span> Síndica Profissional</span><span>06</span></div>
+</section>
+
+<!-- ================= 7. OBRAS — PARQUE AMARIGE (2) ================= -->
+<section class="page">
+  <div class="pad">
+    <div class="action">
+      <img src="assets/pa_manutencao_fachada.jpg" alt="Manutenção de fachada">
+      <div class="ov"><div class="s">Acompanhamento de obras</div><div class="t">Manutenção predial e pintura de fachada com equipe técnica especializada</div></div>
+    </div>
+    <div class="show-grid g4">
+      <div class="scell"><img src="assets/pa_show_entrada.jpg" alt=""><div class="cap">Entrada e áreas de convivência</div></div>
+      <div class="scell"><img src="assets/pa_show_passarela.jpg" alt=""><div class="cap">Passarela coberta</div></div>
+      <div class="scell"><img src="assets/pa_show_bicicletario.jpg" alt=""><div class="cap">Bicicletário coberto</div></div>
+      <div class="scell"><img src="assets/pa_show_lazer.jpg" alt=""><div class="cap">Área de lazer coberta</div></div>
+    </div>
+    <div class="note">Melhorias voltadas ao conforto, à segurança e à convivência dos moradores.</div>
+  </div>
+  <div class="footer"><span>Eliane Souza Ferreira <span class="dot">·</span> Síndica Profissional</span><span>07</span></div>
+</section>
+
+<!-- ================= 8. OBRAS — IPÊ ROXO (1) ================= -->
+<section class="page">
+  <div class="pad">
+    <div class="sec-head">
+      <div class="sec-num">05</div>
+      <div class="meta">
+        <div class="sec-label">Obras e Melhorias Realizadas</div>
+        <div class="sec-title">Novos espaços de lazer</div>
+        <div class="sec-sub">Condomínio Ipê Roxo</div>
+      </div>
+    </div>
+    <div class="ba-block">
+      <div class="ba">
+        <div class="item"><div class="img h-port" style="background-image:url('assets/ipe_piscina_antes.jpg')"><span class="ba-tag tag-antes">Antes</span></div></div>
+        <div class="item"><div class="img h-port" style="background-image:url('assets/ipe_piscina_depois.jpg');background-position:center 30%"><span class="ba-tag tag-depois">Depois</span></div></div>
+      </div>
+      <div class="ba-cap">Implantação da área de lazer e piscina <span class="desc">— da obra ao espaço finalizado</span></div>
+    </div>
+    <div class="ba-block">
+      <div class="ba">
+        <div class="item"><div class="img h-port" style="background-image:url('assets/ipe_gourmet_antes.jpg')"><span class="ba-tag tag-antes">Antes</span></div></div>
+        <div class="item"><div class="img h-port" style="background-image:url('assets/ipe_gourmet_depois.jpg')"><span class="ba-tag tag-depois">Depois</span></div></div>
+      </div>
+      <div class="ba-cap">Espaço gourmet e churrasqueira <span class="desc">— readequação e acabamento de área de convivência</span></div>
+    </div>
+    <div class="note">Imagens da área de lazer e piscina capturadas a partir de registros em vídeo das obras.</div>
+  </div>
+  <div class="footer"><span>Eliane Souza Ferreira <span class="dot">·</span> Síndica Profissional</span><span>08</span></div>
+</section>
+
+<!-- ================= 9. OBRAS — IPÊ ROXO (2) ================= -->
+<section class="page">
+  <div class="pad">
+    <div class="ba-block">
+      <div class="ba">
+        <div class="item"><div class="img h-land" style="background-image:url('assets/ipe_jardim_antes.jpg');background-position:center 42%"><span class="ba-tag tag-antes">Antes</span></div></div>
+        <div class="item"><div class="img h-land" style="background-image:url('assets/ipe_show_jardim_rampa.jpg');background-position:center 60%"><span class="ba-tag tag-depois">Depois</span></div></div>
+      </div>
+      <div class="ba-cap">Revitalização do jardim <span class="desc">— paisagismo, canteiros e acessibilidade</span></div>
+    </div>
+    <div class="show-grid g4" style="margin-top:1mm;">
+      <div class="scell"><img src="assets/ipe_show_playground.jpg" alt=""><div class="cap">Playground</div></div>
+      <div class="scell"><img src="assets/ipe_show_piscina2.jpg" alt=""><div class="cap">Piscina e solário</div></div>
+      <div class="scell"><img src="assets/ipe_show_jardim_seixo.jpg" alt=""><div class="cap">Jardim de seixos</div></div>
+      <div class="scell"><img src="assets/ipe_jardim_depois.jpg" alt=""><div class="cap">Paisagismo iluminado</div></div>
+    </div>
+    <div class="note">Espaços de lazer, acessibilidade e paisagismo que ampliam o bem-estar e valorizam o condomínio.</div>
+  </div>
+  <div class="footer"><span>Eliane Souza Ferreira <span class="dot">·</span> Síndica Profissional</span><span>09</span></div>
+</section>
+
+<!-- ================= 10. OUTRAS FRENTES ================= -->
+<section class="page">
+  <div class="pad">
+    <div class="sec-head">
+      <div class="sec-num">06</div>
+      <div class="meta">
+        <div class="sec-label">Gestão, rotinas e resultados</div>
+        <div class="sec-title">Outras frentes de atuação</div>
+        <hr class="rule">
+      </div>
+    </div>
+    <p class="lead" style="margin-bottom:7mm;max-width:165mm;">Para além das obras, a gestão condominial se sustenta em rotinas administrativas conduzidas com método, transparência e atenção às pessoas.</p>
+    <div class="fgrid">
+      <div class="fitem"><div class="ic"><svg viewBox="0 0 24 24"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5"/><path d="M10 13h6M10 16h6"/></svg></div><div><h4>Gestão administrativa</h4><p>Organização de rotinas, documentos, contratos e processos do condomínio.</p></div></div>
+      <div class="fitem"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 19V9M9 19V5M14 19v-7M19 19v-11"/><path d="M3 21h18"/></svg></div><div><h4>Gestão financeira condominial</h4><p>Planejamento orçamentário, controle de despesas e equilíbrio das contas.</p></div></div>
+      <div class="fitem"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V8l7-4 7 4v13"/><path d="M9 21v-6h6v6"/></svg></div><div><h4>Conservação e valorização patrimonial</h4><p>Zelo permanente pelas áreas comuns e pela preservação do patrimônio.</p></div></div>
+      <div class="fitem"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 12l2-2 4 4 7-7 5 5"/><path d="M14 6h6v6"/></svg></div><div><h4>Acompanhamento de obras e manutenções</h4><p>Planejamento, supervisão e acompanhamento técnico das intervenções.</p></div></div>
+      <div class="fitem"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5"/><path d="M17 7a3 3 0 010 6M21 20c0-2-1.5-3.5-3.5-4"/></svg></div><div><h4>Atendimento a moradores</h4><p>Contato próximo, escuta e mediação para uma convivência harmoniosa.</p></div></div>
+      <div class="fitem"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3v4M5 10h14l-1 9H6z"/><path d="M9 10a3 3 0 016 0"/></svg></div><div><h4>Organização de assembleias</h4><p>Convocação, condução e registro das decisões coletivas do condomínio.</p></div></div>
+      <div class="fitem"><div class="ic"><svg viewBox="0 0 24 24"><path d="M8 12l2 2 3-3 3 3 1-1"/><path d="M3 7h18v11H3z"/><path d="M7 7V5h10v2"/></svg></div><div><h4>Contratação e gestão de fornecedores</h4><p>Seleção, contratação e acompanhamento de prestadores de serviço.</p></div></div>
+      <div class="fitem"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="8" cy="9" r="2.4"/><circle cx="16" cy="9" r="2.4"/><path d="M3 19c0-2.5 2.2-4 5-4s5 1.5 5 4M13 19c0-2.5 2.2-4 5-4s3 1.2 3 3"/></svg></div><div><h4>Gestão de equipes e terceirizados</h4><p>Coordenação e treinamento de funcionários próprios e terceirizados.</p></div></div>
+    </div>
+  </div>
+  <div class="footer"><span>Eliane Souza Ferreira <span class="dot">·</span> Síndica Profissional</span><span>10</span></div>
+</section>
+
+<!-- ================= 11. DIFERENCIAIS ================= -->
+<section class="page">
+  <div class="pad">
+    <div class="sec-head">
+      <div class="sec-num">07</div>
+      <div class="meta">
+        <div class="sec-label">Diferenciais</div>
+        <div class="sec-title">Diferenciais profissionais</div>
+        <hr class="rule">
+      </div>
+    </div>
+    <div class="diffs">
+      <div class="diff"><div class="dn">01</div><div class="dc"><h4>Experiência consolidada em gestão condominial</h4><p>Trajetória de mais de duas décadas em gestão, operações e administração, com atuação contínua como síndica profissional.</p></div></div>
+      <div class="diff"><div class="dn">02</div><div class="dc"><h4>Atuação contínua em condomínios de grande responsabilidade</h4><p>Confiança renovada ao longo de anos e mandatos, com estabilidade e continuidade administrativa.</p></div></div>
+      <div class="diff"><div class="dn">03</div><div class="dc"><h4>Acompanhamento próximo de obras e melhorias</h4><p>Presença ativa do diagnóstico à entrega, garantindo qualidade, segurança e valorização das áreas comuns.</p></div></div>
+      <div class="diff"><div class="dn">04</div><div class="dc"><h4>Foco em transparência, organização e valorização do patrimônio</h4><p>Gestão financeira planejada e prestação de contas clara, sempre orientadas ao cuidado com o patrimônio coletivo.</p></div></div>
+      <div class="diff"><div class="dn">05</div><div class="dc"><h4>Relacionamento próximo com moradores, conselhos e fornecedores</h4><p>Comunicação aberta e capacidade de mediação para uma convivência harmoniosa e decisões bem conduzidas.</p></div></div>
+    </div>
+  </div>
+  <div class="footer"><span>Eliane Souza Ferreira <span class="dot">·</span> Síndica Profissional</span><span>11</span></div>
+</section>
+
+<!-- ================= 12. ENCERRAMENTO ================= -->
+<section class="page closing">
+  <div class="bgtex"></div>
+  <div class="frame"></div>
+  <div class="inner">
+    <div class="mk">&ldquo;</div>
+    <div class="eb">Compromisso</div>
+    <div class="quote">Gestão condominial com <em>responsabilidade, presença</em> e compromisso com a <em>valorização do patrimônio</em>.</div>
+    <div class="gline"></div>
+    <div class="who">Eliane Souza Ferreira</div>
+    <div class="role">Síndica Profissional</div>
+    <div class="contact">
+      <div class="ci"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-3 2a12 12 0 005 5l2-3 5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2"/></svg>(16) 99738-2936</div>
+      <div class="ci"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>lidossantossouza@gmail.com</div>
+    </div>
+    <div class="contact-note">Disponível para novas gestões e consultorias</div>
+  </div>
+</section>
+
+</body>
+</html>
