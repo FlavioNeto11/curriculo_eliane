@@ -388,6 +388,96 @@ footer.legal{background:#05181c;color:rgba(255,255,255,.4);font-size:11px;text-a
   .fcard .badge::after{left:auto;right:0;top:22px;bottom:22px;width:2px;height:auto;background:linear-gradient(180deg,var(--gold),transparent);}
   .fcard .body{flex:1;}
 }
+
+/* ====================== TABLET ====================== */
+@media(min-width:720px) and (max-width:1023px){
+  .wrap{max-width:780px;}
+  .gallery{grid-template-columns:repeat(3,1fr);}
+  .contacts{max-width:520px;}
+}
+
+/* ====================== DESKTOP ====================== */
+@media(min-width:1024px){
+  html{scroll-padding-top:74px;}
+  .wrap{max-width:1100px;padding:0 48px;}
+  section{padding:106px 0;}
+  .sec-title{font-size:50px;}
+  .sec-num{font-size:230px;top:-70px;}
+  .lead{font-size:18px;}
+
+  /* topbar */
+  .topbar{padding:20px 40px;}
+  .topbar.solid{padding:13px 40px;}
+
+  /* hero */
+  .hero .hbody{max-width:1100px;margin:0 auto;padding:0 60px 92px;}
+  .hero .htop{padding:42px 56px;}
+  .hero .hframe{inset:26px;}
+  .hero .kick{font-size:24px;}
+  .hero .name{font-size:98px;}
+  .hero .gline{margin:30px 0 22px;}
+  .hero .sub{font-size:25px;max-width:36ch;margin-top:24px;}
+  .hero .hcta{margin-top:40px;}
+  .marquee .track span{font-size:26px;padding:0 32px;}
+
+  /* apresentação — 2 colunas com números fixos na lateral */
+  #apresentacao .wrap{display:grid;grid-template-columns:1.62fr 1fr;grid-template-areas:"head head" "intro stats";column-gap:62px;align-items:start;}
+  #apresentacao .sec-head{grid-area:head;}
+  #apresentacao .intro{grid-area:intro;}
+  #apresentacao .stats{grid-area:stats;grid-template-columns:1fr;margin-top:6px;gap:14px;position:sticky;top:96px;}
+  .big{font-size:33px;}
+
+  /* experiência — 3 cards verticais lado a lado */
+  .exp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch;}
+  .exp-grid .fcard{display:block;margin-bottom:0;height:100%;}
+  .exp-grid .fcard .badge{flex-direction:row;align-items:center;gap:14px;padding:20px 22px;}
+  .exp-grid .fcard .badge::after{left:22px;right:22px;top:auto;bottom:0;width:auto;height:2px;background:linear-gradient(90deg,var(--gold),transparent);}
+  .exp-grid .fcard .badge .bn{font-size:30px;}
+
+  /* trajetória + formação — colunas legíveis */
+  .tl{max-width:840px;}
+  #formacao .ccard{max-width:920px;margin-left:auto;margin-right:auto;}
+  #formacao .ccard .modlist{grid-template-columns:repeat(3,1fr);}
+
+  /* obras — antes/depois lado a lado e galeria 4 col */
+  .obra-intro{max-width:840px;}
+  .ba-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:26px;}
+  .ba-grid .ba-block{margin-bottom:0;}
+  .action{min-height:440px;}
+  .action img{min-height:440px;}
+  .gallery{grid-template-columns:repeat(4,1fr);}
+
+  /* outras frentes — 3 colunas */
+  .fgrid{grid-template-columns:repeat(3,1fr);}
+
+  /* diferenciais — 2 colunas */
+  #diferenciais .stagger{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start;}
+  .diff{margin-bottom:0;height:100%;}
+
+  /* encerramento */
+  .closing{padding:124px 0 150px;}
+  .closing .quote{font-size:44px;max-width:20ch;}
+  .closing .who{font-size:34px;}
+  .contacts{flex-direction:row;max-width:840px;gap:14px;}
+  .contacts .cbtn{flex:1;}
+
+  /* hover (mouse) */
+  .fcard:hover{transform:translateY(-6px);box-shadow:0 30px 70px -28px rgba(8,32,37,.55);}
+  .fitem:hover{transform:translateY(-5px);box-shadow:var(--shadow);}
+  .ccard:hover{box-shadow:var(--shadow);}
+  .btn-gold:hover{transform:translateY(-2px);box-shadow:0 20px 44px -12px rgba(176,138,78,.9);}
+  .btn-ghost:hover{background:rgba(255,255,255,.16);}
+  .cbtn:hover{transform:translateY(-3px);background:rgba(255,255,255,.12);}
+  .diff:hover{background:linear-gradient(180deg,rgba(255,255,255,.95),rgba(255,255,255,.75));transform:none;}
+}
+
+/* ====================== DESKTOP LARGO ====================== */
+@media(min-width:1440px){
+  .wrap{max-width:1200px;}
+  .hero .name{font-size:112px;}
+  .hero .hbody{max-width:1200px;}
+  section{padding:120px 0;}
+}
 </style>
 </head>
 <body>
@@ -488,6 +578,7 @@ footer.legal{background:#05181c;color:rgba(255,255,255,.4);font-size:11px;text-a
   <div class="wrap">
     <div class="sec-head reveal"><div class="sec-num">02</div><div class="sec-label">Experiência</div><h2 class="sec-title">Experiência em gestão condominial</h2></div>
     <p class="lead reveal" style="margin-bottom:28px;">Atuação contínua à frente de condomínios de grande responsabilidade, com gestão administrativa, financeira e operacional orientada à conservação e à valorização do patrimônio.</p>
+    <div class="exp-grid">
     <article class="fcard reveal">
       <div class="badge"><span class="bn" data-k="experiencia.0.badge">Desde&nbsp;2017</span><span class="bl" data-k="experiencia.0.selo">Atuação atual</span></div>
       <div class="body"><div class="role">Síndica Profissional</div><h3 data-k="experiencia.0.titulo">Condomínio Parque Amarige</h3>
@@ -506,6 +597,7 @@ footer.legal{background:#05181c;color:rgba(255,255,255,.4);font-size:11px;text-a
         <p data-k="experiencia.2.descricao">Uma década à frente da gestão, com foco em organização administrativa, conservação das áreas comuns e relacionamento próximo com os moradores — base de uma administração estável e de confiança.</p>
         <div class="tags"><span class="tag">Gestão</span><span class="tag">Conservação</span><span class="tag">Transparência</span></div></div>
     </article>
+    </div>
   </div>
 </section>
 
@@ -549,6 +641,7 @@ footer.legal{background:#05181c;color:rgba(255,255,255,.4);font-size:11px;text-a
   <div class="wrap">
     <div class="sec-head reveal"><div class="sec-num">05</div><div class="sec-label">Obras e Melhorias</div><h2 class="sec-title">Transformações que valorizam</h2><div class="sec-sub">Condomínio Parque Amarige</div></div>
     <p class="obra-intro reveal">Registros de obras e melhorias acompanhadas de perto — do diagnóstico à entrega — com foco em conservação, segurança e valorização das áreas comuns. <em>Arraste para comparar o antes e o depois.</em></p>
+    <div class="ba-grid">
     <div class="ba-block reveal">
       <div class="ba-slider" data-slider><img class="before" src="output/assets/pa_paisagismo_antes.jpg" alt="Paisagismo antes"><div class="after-wrap"><img src="output/assets/pa_paisagismo_depois.jpg" alt="Paisagismo depois"></div><span class="ba-tag tag-antes">Antes</span><span class="ba-tag tag-depois">Depois</span><div class="ba-handle"><span class="knob"><svg viewBox="0 0 24 24"><path d="M9 6 4 12l5 6M15 6l5 6-5 6"/></svg></span></div></div>
       <div class="ba-cap">Revitalização paisagística de área comum<span class="desc">Recuperação e tratamento de jardim</span></div>
@@ -556,6 +649,7 @@ footer.legal{background:#05181c;color:rgba(255,255,255,.4);font-size:11px;text-a
     <div class="ba-block reveal">
       <div class="ba-slider" data-slider><img class="before" src="output/assets/pa_fachada_antes.jpg" alt="Fachada antes" style="object-position:center 22%;"><div class="after-wrap"><img src="output/assets/pa_fachada_depois.jpg" alt="Fachada depois"></div><span class="ba-tag tag-antes">Antes</span><span class="ba-tag tag-depois">Depois</span><div class="ba-handle"><span class="knob"><svg viewBox="0 0 24 24"><path d="M9 6 4 12l5 6M15 6l5 6-5 6"/></svg></span></div></div>
       <div class="ba-cap">Pintura e conservação de fachada<span class="desc">Modernização visual e proteção da estrutura</span></div>
+    </div>
     </div>
     <div class="action reveal"><div class="imgwrap"><img data-parallax src="output/assets/pa_manutencao_fachada.jpg" alt="Manutenção de fachada"></div><div class="ov"><div class="s">Acompanhamento de obras</div><div class="t">Manutenção predial e pintura de fachada com equipe técnica especializada</div></div></div>
     <div class="gallery reveal stagger">
@@ -572,6 +666,7 @@ footer.legal{background:#05181c;color:rgba(255,255,255,.4);font-size:11px;text-a
 <section class="alt">
   <div class="wrap">
     <div class="sec-head reveal"><div class="sec-num">05</div><div class="sec-label">Obras e Melhorias</div><h2 class="sec-title">Novos espaços de lazer</h2><div class="sec-sub">Condomínio Ipê Roxo</div></div>
+    <div class="ba-grid">
     <div class="ba-block reveal">
       <div class="ba-slider" data-slider><img class="before" src="output/assets/ipe_piscina_antes.jpg" alt="Piscina em obra"><div class="after-wrap"><img src="output/assets/ipe_piscina_depois.jpg" alt="Piscina finalizada" style="object-position:center 30%;"></div><span class="ba-tag tag-antes">Antes</span><span class="ba-tag tag-depois">Depois</span><div class="ba-handle"><span class="knob"><svg viewBox="0 0 24 24"><path d="M9 6 4 12l5 6M15 6l5 6-5 6"/></svg></span></div></div>
       <div class="ba-cap">Implantação da área de lazer e piscina<span class="desc">Da obra ao espaço finalizado</span></div>
@@ -583,6 +678,7 @@ footer.legal{background:#05181c;color:rgba(255,255,255,.4);font-size:11px;text-a
     <div class="ba-block reveal">
       <div class="ba-slider" data-slider><img class="before" src="output/assets/ipe_jardim_antes.jpg" alt="Jardim antes" style="object-position:center 42%;"><div class="after-wrap"><img src="output/assets/ipe_show_jardim_rampa.jpg" alt="Jardim depois" style="object-position:center 60%;"></div><span class="ba-tag tag-antes">Antes</span><span class="ba-tag tag-depois">Depois</span><div class="ba-handle"><span class="knob"><svg viewBox="0 0 24 24"><path d="M9 6 4 12l5 6M15 6l5 6-5 6"/></svg></span></div></div>
       <div class="ba-cap">Revitalização do jardim<span class="desc">Paisagismo, canteiros e acessibilidade</span></div>
+    </div>
     </div>
     <div class="gallery reveal stagger">
       <div class="gcell"><img src="output/assets/ipe_show_playground.jpg" alt="Playground"><div class="cap">Playground</div></div>
