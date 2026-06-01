@@ -2,14 +2,10 @@ backend:
   name: git-gateway
   branch: main
 
-# Pasta onde as imagens enviadas pelo painel são guardadas
 media_folder: "output/assets"
 public_folder: "/output/assets"
 
-# Idioma da interface
 locale: "pt"
-
-# Mensagem de commit ao salvar
 publish_mode: simple
 
 site_url: https://helpful-frangipane-039d97.netlify.app/
@@ -24,59 +20,239 @@ collections:
         label: "Página principal"
         file: "content.json"
         format: "json"
-        description: "Edite os textos, contatos e a imagem de capa do portfólio."
+        description: "Edite todo o conteúdo do site. Use **texto** para negrito e *texto* para itálico/dourado."
         fields:
-          - label: "Contato"
+          - label: "① Contato"
             name: "contato"
             widget: "object"
+            collapsed: true
             fields:
               - { label: "Telefone (como aparece)", name: "telefone", widget: "string" }
-              - { label: "WhatsApp (só números, com DDI 55)", name: "whatsapp", widget: "string", hint: "Exemplo: 5516997382936" }
+              - { label: "WhatsApp (só números, com DDI 55)", name: "whatsapp", widget: "string", hint: "Ex.: 5516997382936" }
               - { label: "E-mail", name: "email", widget: "string" }
 
-          - label: "Capa / Topo"
+          - label: "② Capa / Topo"
             name: "hero"
             widget: "object"
+            collapsed: true
             fields:
+              - { label: "Etiqueta topo esquerda", name: "topo_esq", widget: "string" }
+              - { label: "Etiqueta topo direita", name: "topo_dir", widget: "string" }
               - { label: "Texto pequeno (acima do nome)", name: "kick", widget: "string" }
               - { label: "Cargo", name: "cargo", widget: "string" }
               - { label: "Frase de destaque", name: "subtitulo", widget: "text" }
-              - { label: "Imagem de capa", name: "imagem", widget: "image", required: false, hint: "Toque para enviar uma nova foto de capa." }
+              - { label: "Imagem de capa", name: "imagem", widget: "image", required: false }
+              - { label: "Botão principal (texto)", name: "cta1", widget: "string" }
+              - { label: "Botão secundário (texto)", name: "cta2", widget: "string" }
 
-          - label: "Apresentação"
+          - label: "③ Faixa rolante (palavras-chave)"
+            name: "marquee"
+            widget: "list"
+            collapsed: true
+            field: { label: "Palavra", name: "palavra", widget: "string" }
+
+          - label: "④ Apresentação"
             name: "apresentacao"
             widget: "object"
+            collapsed: true
             fields:
-              - { label: "Frase de destaque", name: "destaque", widget: "text", hint: "Use **assim** para destacar em dourado/negrito." }
+              - { label: "Rótulo da seção", name: "label", widget: "string" }
+              - { label: "Título da seção", name: "titulo", widget: "string" }
+              - { label: "Frase de destaque", name: "destaque", widget: "text" }
               - { label: "Parágrafo 1", name: "p1", widget: "text" }
               - { label: "Parágrafo 2", name: "p2", widget: "text" }
               - { label: "Parágrafo 3", name: "p3", widget: "text" }
-              - { label: "Citação (frase em destaque)", name: "citacao", widget: "text" }
+              - { label: "Citação", name: "citacao", widget: "text" }
 
-          - label: "Números / Indicadores"
+          - label: "⑤ Números / Indicadores"
             name: "numeros"
             widget: "list"
-            max: 4
-            min: 4
+            collapsed: true
             label_singular: "Número"
             summary: "{{fields.valor}} — {{fields.texto}}"
             fields:
-              - { label: "Número / Valor", name: "valor", widget: "string", hint: "Exemplos: +20, 10, 2017, 04" }
-              - { label: "Texto", name: "texto", widget: "text", hint: "Use **assim** para negrito." }
+              - { label: "Número / Valor", name: "valor", widget: "string", hint: "Ex.: +20, 10, 2017, 04" }
+              - { label: "Texto", name: "texto", widget: "text" }
 
-          - label: "Experiência (condomínios)"
+          - label: "⑥ Experiência"
             name: "experiencia"
-            widget: "list"
-            label_singular: "Condomínio"
-            summary: "{{fields.titulo}}"
+            widget: "object"
+            collapsed: true
             fields:
-              - { label: "Selo — destaque (ex.: Desde 2017, 04, 10)", name: "badge", widget: "string" }
-              - { label: "Selo — rótulo (ex.: Mandatos)", name: "selo", widget: "string" }
-              - { label: "Nome do condomínio", name: "titulo", widget: "string" }
-              - { label: "Descrição", name: "descricao", widget: "text" }
+              - { label: "Rótulo da seção", name: "label", widget: "string" }
+              - { label: "Título da seção", name: "titulo", widget: "string" }
+              - { label: "Introdução", name: "intro", widget: "text" }
+              - label: "Condomínios"
+                name: "itens"
+                widget: "list"
+                label_singular: "Condomínio"
+                summary: "{{fields.titulo}}"
+                fields:
+                  - { label: "Selo — destaque", name: "badge", widget: "string", hint: "Ex.: Desde 2017, 04, 10" }
+                  - { label: "Selo — rótulo", name: "selo", widget: "string" }
+                  - { label: "Nome do condomínio", name: "titulo", widget: "string" }
+                  - { label: "Descrição", name: "descricao", widget: "text" }
 
-          - label: "Encerramento"
+          - label: "⑦ Trajetória profissional"
+            name: "trajetoria"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Rótulo da seção", name: "label", widget: "string" }
+              - { label: "Título da seção", name: "titulo", widget: "string" }
+              - { label: "Introdução", name: "intro", widget: "text" }
+              - label: "Experiências (linha do tempo)"
+                name: "itens"
+                widget: "list"
+                label_singular: "Experiência"
+                summary: "{{fields.empresa}} ({{fields.periodo}})"
+                fields:
+                  - { label: "Período", name: "periodo", widget: "string", hint: "Ex.: 2000 — 2008" }
+                  - { label: "Empresa", name: "empresa", widget: "string" }
+                  - { label: "Cargo", name: "cargo", widget: "string" }
+                  - { label: "Descrição", name: "descricao", widget: "text" }
+
+          - label: "⑧ Formação e cursos"
+            name: "formacao"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Rótulo da seção", name: "label", widget: "string" }
+              - { label: "Título da seção", name: "titulo", widget: "string" }
+              - label: "Curso principal (Sindiconet)"
+                name: "sindiconet"
+                widget: "object"
+                fields:
+                  - { label: "Ano", name: "ano", widget: "string" }
+                  - { label: "Subtítulo (provedor)", name: "prov", widget: "string" }
+                  - { label: "Título", name: "titulo", widget: "string" }
+                  - { label: "Módulos", name: "modulos", widget: "list", field: { label: "Módulo", name: "modulo", widget: "string" } }
+              - label: "Curso (Sebrae)"
+                name: "sebrae"
+                widget: "object"
+                fields:
+                  - { label: "Ano", name: "ano", widget: "string" }
+                  - { label: "Subtítulo (provedor)", name: "prov", widget: "string" }
+                  - { label: "Título", name: "titulo", widget: "string" }
+                  - { label: "Módulos", name: "modulos", widget: "list", field: { label: "Módulo", name: "modulo", widget: "string" } }
+              - label: "Palestras (Café com Síndico)"
+                name: "cafe"
+                widget: "object"
+                fields:
+                  - { label: "Ano", name: "ano", widget: "string" }
+                  - { label: "Subtítulo (provedor)", name: "prov", widget: "string" }
+                  - { label: "Título", name: "titulo", widget: "string" }
+                  - { label: "Texto", name: "texto", widget: "text" }
+                  - label: "Palestras"
+                    name: "palestras"
+                    widget: "list"
+                    label_singular: "Palestra"
+                    summary: "{{fields.nome}}"
+                    fields:
+                      - { label: "Palestrante / Empresa", name: "nome", widget: "string" }
+                      - { label: "Tema", name: "texto", widget: "text" }
+
+          - label: "⑨ Obras — Parque Amarige"
+            name: "obras_amarige"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Rótulo da seção", name: "label", widget: "string" }
+              - { label: "Título da seção", name: "titulo", widget: "string" }
+              - { label: "Subtítulo (condomínio)", name: "sub", widget: "string" }
+              - { label: "Introdução", name: "intro", widget: "text" }
+              - label: "Antes e depois"
+                name: "antes_depois"
+                widget: "list"
+                label_singular: "Antes/Depois"
+                summary: "{{fields.titulo}}"
+                fields:
+                  - { label: "Foto ANTES", name: "antes", widget: "image" }
+                  - { label: "Foto DEPOIS", name: "depois", widget: "image" }
+                  - { label: "Título", name: "titulo", widget: "string" }
+                  - { label: "Descrição curta", name: "desc", widget: "string" }
+              - { label: "Foto em destaque (faixa)", name: "destaque_img", widget: "image", required: false }
+              - { label: "Destaque — etiqueta", name: "destaque_s", widget: "string" }
+              - { label: "Destaque — título", name: "destaque_t", widget: "text" }
+              - label: "Galeria"
+                name: "galeria"
+                widget: "list"
+                label_singular: "Foto"
+                summary: "{{fields.legenda}}"
+                fields:
+                  - { label: "Foto", name: "img", widget: "image" }
+                  - { label: "Legenda", name: "legenda", widget: "string" }
+              - { label: "Nota (rodapé da seção)", name: "nota", widget: "text" }
+
+          - label: "⑩ Obras — Ipê Roxo"
+            name: "obras_ipe"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Rótulo da seção", name: "label", widget: "string" }
+              - { label: "Título da seção", name: "titulo", widget: "string" }
+              - { label: "Subtítulo (condomínio)", name: "sub", widget: "string" }
+              - label: "Antes e depois"
+                name: "antes_depois"
+                widget: "list"
+                label_singular: "Antes/Depois"
+                summary: "{{fields.titulo}}"
+                fields:
+                  - { label: "Foto ANTES", name: "antes", widget: "image" }
+                  - { label: "Foto DEPOIS", name: "depois", widget: "image" }
+                  - { label: "Título", name: "titulo", widget: "string" }
+                  - { label: "Descrição curta", name: "desc", widget: "string" }
+              - label: "Galeria"
+                name: "galeria"
+                widget: "list"
+                label_singular: "Foto"
+                summary: "{{fields.legenda}}"
+                fields:
+                  - { label: "Foto", name: "img", widget: "image" }
+                  - { label: "Legenda", name: "legenda", widget: "string" }
+              - { label: "Nota (rodapé da seção)", name: "nota", widget: "text" }
+
+          - label: "⑪ Outras frentes de atuação"
+            name: "frentes"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Rótulo da seção", name: "label", widget: "string" }
+              - { label: "Título da seção", name: "titulo", widget: "string" }
+              - { label: "Introdução", name: "intro", widget: "text" }
+              - label: "Itens"
+                name: "itens"
+                widget: "list"
+                label_singular: "Frente"
+                summary: "{{fields.titulo}}"
+                fields:
+                  - { label: "Título", name: "titulo", widget: "string" }
+                  - { label: "Texto", name: "texto", widget: "text" }
+
+          - label: "⑫ Diferenciais"
+            name: "diferenciais"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Rótulo da seção", name: "label", widget: "string" }
+              - { label: "Título da seção", name: "titulo", widget: "string" }
+              - label: "Itens"
+                name: "itens"
+                widget: "list"
+                label_singular: "Diferencial"
+                summary: "{{fields.titulo}}"
+                fields:
+                  - { label: "Título", name: "titulo", widget: "string" }
+                  - { label: "Texto", name: "texto", widget: "text" }
+
+          - label: "⑬ Encerramento"
             name: "encerramento"
             widget: "object"
+            collapsed: true
             fields:
-              - { label: "Frase final", name: "citacao", widget: "text", hint: "Use *assim* para destacar em dourado/itálico." }
+              - { label: "Etiqueta", name: "eyebrow", widget: "string" }
+              - { label: "Frase final", name: "citacao", widget: "text" }
+              - { label: "Nome", name: "nome", widget: "string" }
+              - { label: "Cargo", name: "cargo", widget: "string" }
+              - { label: "Nota", name: "nota", widget: "string" }
+              - { label: "Texto do botão de PDF", name: "pdf", widget: "string" }

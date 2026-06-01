@@ -5,12 +5,26 @@
     "email": "lidossantossouza@gmail.com"
   },
   "hero": {
+    "topo_esq": "Portfólio Profissional",
+    "topo_dir": "Gestão Condominial",
     "kick": "Apresentação profissional",
     "cargo": "Síndica Profissional",
     "subtitulo": "Gestão condominial com experiência, transparência e foco em valorização patrimonial.",
-    "imagem": "output/assets/cover.jpg"
+    "imagem": "output/assets/cover.jpg",
+    "cta1": "Falar no WhatsApp",
+    "cta2": "Conhecer o trabalho"
   },
+  "marquee": [
+    "Gestão Condominial",
+    "Transparência",
+    "Valorização Patrimonial",
+    "Obras & Melhorias",
+    "Atendimento Próximo",
+    "Gestão Financeira"
+  ],
   "apresentacao": {
+    "label": "Apresentação",
+    "titulo": "Quem conduz a gestão",
     "destaque": "Uma administração **próxima, transparente** e comprometida com o patrimônio.",
     "p1": "Eliane Souza Ferreira atua como Síndica Profissional com trajetória consolidada em gestão condominial e ampla vivência em administração, operações e gestão de pessoas. Seu trabalho é orientado pela proximidade: o contato direto com cada morador constrói a confiança e a transparência de uma administração aberta, em que todos podem participar e contribuir.",
     "p2": "Com atenção permanente à saúde financeira do condomínio, conduz uma gestão de despesas planejadas e equilibradas — que cabem no orçamento dos condôminos e mantêm o patrimônio valorizado e bem cuidado.",
@@ -18,44 +32,157 @@
     "citacao": "Um condomínio saudável nasce de uma gestão planejada, próxima das pessoas e transparente em cada decisão."
   },
   "numeros": [
-    {
-      "valor": "+20",
-      "texto": "**anos** de atuação profissional em gestão, operações e administração"
-    },
-    {
-      "valor": "10",
-      "texto": "**anos** à frente do Condomínio Ulisses dos Santos Ribeiro"
-    },
-    {
-      "valor": "2017",
-      "texto": "síndica do **Parque Amarige** desde então — atuação atual"
-    },
-    {
-      "valor": "04",
-      "texto": "**mandatos** no Condomínio Shopping do Carmo"
-    }
+    { "valor": "+20", "texto": "**anos** de atuação profissional em gestão, operações e administração" },
+    { "valor": "10", "texto": "**anos** à frente do Condomínio Ulisses dos Santos Ribeiro" },
+    { "valor": "2017", "texto": "síndica do **Parque Amarige** desde então — atuação atual" },
+    { "valor": "04", "texto": "**mandatos** no Condomínio Shopping do Carmo" }
   ],
-  "experiencia": [
-    {
-      "badge": "Desde 2017",
-      "selo": "Atuação atual",
-      "titulo": "Condomínio Parque Amarige",
-      "descricao": "Responsável pela operação e pelo suporte técnico, com supervisão de serviços terceirizados e contato direto com os condôminos. Conduz o treinamento de equipes e o planejamento das manutenções prediais, zelando pela convivência harmoniosa."
+  "experiencia": {
+    "label": "Experiência",
+    "titulo": "Experiência em gestão condominial",
+    "intro": "Atuação contínua à frente de condomínios de grande responsabilidade, com gestão administrativa, financeira e operacional orientada à conservação e à valorização do patrimônio.",
+    "itens": [
+      {
+        "badge": "Desde 2017",
+        "selo": "Atuação atual",
+        "titulo": "Condomínio Parque Amarige",
+        "descricao": "Responsável pela operação e pelo suporte técnico, com supervisão de serviços terceirizados e contato direto com os condôminos. Conduz o treinamento de equipes e o planejamento das manutenções prediais, zelando pela convivência harmoniosa."
+      },
+      {
+        "badge": "04",
+        "selo": "Mandatos",
+        "titulo": "Condomínio Shopping do Carmo",
+        "descricao": "Confiança renovada ao longo de quatro mandatos. Responsável pela manutenção interna e externa, pelos pagamentos e pelo planejamento, assegurando continuidade administrativa e cuidado com as áreas comuns."
+      },
+      {
+        "badge": "10",
+        "selo": "Anos de atuação",
+        "titulo": "Condomínio Ulisses dos Santos Ribeiro",
+        "descricao": "Uma década à frente da gestão, com foco em organização administrativa, conservação das áreas comuns e relacionamento próximo com os moradores — base de uma administração estável e de confiança."
+      }
+    ]
+  },
+  "trajetoria": {
+    "label": "Trajetória",
+    "titulo": "Trajetória profissional",
+    "intro": "Uma base sólida construída em gestão, operações, administração e atendimento — competências que sustentam a atuação como síndica profissional.",
+    "itens": [
+      { "periodo": "2000 — 2008", "empresa": "COCISA", "cargo": "Síndica", "descricao": "Responsável por toda a parte operacional e técnica do local, pela gestão de pessoas e pelos recursos humanos." },
+      { "periodo": "2006 — 2008", "empresa": "Essencial Nutrição", "cargo": "Gerente Operacional Júnior por Competências", "descricao": "Gestão das refeições das unidades (Escandinávia, em Araraquara, e Syngenta, em Matão): cotações e compras de matérias-primas, treinamento de funcionários, atendimento ao cliente, controle de temperaturas, manutenção e conservação dos estabelecimentos e fechamento de folha de pagamento." },
+      { "periodo": "2008 — 2009", "empresa": "Grupo Stuchi", "cargo": "Auxiliar Administrativo", "descricao": "Locação e venda, contratos, vistorias e contato direto com clientes. Responsável pelos porteiros e equipes de limpeza dos condomínios administrados." },
+      { "periodo": "2010 — 2016", "empresa": "Dabeana Serviços", "cargo": "Proprietária", "descricao": "Atendimento ao cliente, venda de serviços, contratos entre empresas e treinamento de equipes." },
+      { "periodo": "2013 — 2020", "empresa": "Dabeana Nutrição", "cargo": "Proprietária", "descricao": "Atendimento ao cliente, supervisão e treinamento em guias de boas práticas, gestão de recursos humanos e distribuição dos serviços operacionais." }
+    ]
+  },
+  "formacao": {
+    "label": "Capacitação",
+    "titulo": "Formação, cursos e capacitações",
+    "sindiconet": {
+      "ano": "2021",
+      "prov": "Curso · Sindiconet",
+      "titulo": "Gestão condominial — formação completa",
+      "modulos": [
+        "Gestão Condominial",
+        "Legislação I, II e III",
+        "Implantação de Condomínio",
+        "Segurança em Condomínio",
+        "Gestão Financeira",
+        "Gestão de RH I e II",
+        "Sustentabilidade",
+        "Condomínio Clube",
+        "Manutenção Predial",
+        "Assembleia"
+      ]
     },
-    {
-      "badge": "04",
-      "selo": "Mandatos",
-      "titulo": "Condomínio Shopping do Carmo",
-      "descricao": "Confiança renovada ao longo de quatro mandatos. Responsável pela manutenção interna e externa, pelos pagamentos e pelo planejamento, assegurando continuidade administrativa e cuidado com as áreas comuns."
+    "sebrae": {
+      "ano": "2017",
+      "prov": "Curso · Sebrae",
+      "titulo": "Gestão e planejamento",
+      "modulos": ["Gestão Financeira", "Planejamento Financeiro"]
     },
-    {
-      "badge": "10",
-      "selo": "Anos de atuação",
-      "titulo": "Condomínio Ulisses dos Santos Ribeiro",
-      "descricao": "Uma década à frente da gestão, com foco em organização administrativa, conservação das áreas comuns e relacionamento próximo com os moradores — base de uma administração estável e de confiança."
+    "cafe": {
+      "ano": "2022",
+      "prov": "Café com Síndico · Palestras",
+      "titulo": "Atualização contínua",
+      "texto": "Participação no ciclo de palestras e debates voltados à gestão condominial, com temas atuais sobre legislação, finanças, segurança e administração.",
+      "palestras": [
+        { "nome": "Dr. Rodrigo Karpat", "texto": "Questões recorrentes da vida em condomínio e as grandes polêmicas da vida condominial." },
+        { "nome": "Comgás (Ronaldo Andreos)", "texto": "Benefícios do gás natural para o meio ambiente e para o seu condomínio." },
+        { "nome": "Campseg · Auto Defesa Brasil", "texto": "Gestão integrada dos serviços para condomínio." },
+        { "nome": "Administradora Puiatti (Guilherme Gomes)", "texto": "Gerenciamento de riscos na administração de condomínios." },
+        { "nome": "Superlógica (Dra. Elisângela Thomazini)", "texto": "Inadimplência zero: a solução para a inadimplência condominial." }
+      ]
     }
-  ],
+  },
+  "obras_amarige": {
+    "label": "Obras e Melhorias",
+    "titulo": "Transformações que valorizam",
+    "sub": "Condomínio Parque Amarige",
+    "intro": "Registros de obras e melhorias acompanhadas de perto — do diagnóstico à entrega — com foco em conservação, segurança e valorização das áreas comuns. *Arraste para comparar o antes e o depois.*",
+    "antes_depois": [
+      { "antes": "output/assets/pa_paisagismo_antes.jpg", "depois": "output/assets/pa_paisagismo_depois.jpg", "titulo": "Revitalização paisagística de área comum", "desc": "Recuperação e tratamento de jardim" },
+      { "antes": "output/assets/pa_fachada_antes.jpg", "depois": "output/assets/pa_fachada_depois.jpg", "titulo": "Pintura e conservação de fachada", "desc": "Modernização visual e proteção da estrutura" }
+    ],
+    "destaque_img": "output/assets/pa_manutencao_fachada.jpg",
+    "destaque_s": "Acompanhamento de obras",
+    "destaque_t": "Manutenção predial e pintura de fachada com equipe técnica especializada",
+    "galeria": [
+      { "img": "output/assets/pa_show_entrada.jpg", "legenda": "Entrada e áreas de convivência" },
+      { "img": "output/assets/pa_show_passarela.jpg", "legenda": "Passarela coberta" },
+      { "img": "output/assets/pa_show_bicicletario.jpg", "legenda": "Bicicletário coberto" },
+      { "img": "output/assets/pa_show_lazer.jpg", "legenda": "Área de lazer coberta" }
+    ],
+    "nota": "Melhorias voltadas ao conforto, à segurança e à convivência dos moradores."
+  },
+  "obras_ipe": {
+    "label": "Obras e Melhorias",
+    "titulo": "Novos espaços de lazer",
+    "sub": "Condomínio Ipê Roxo",
+    "antes_depois": [
+      { "antes": "output/assets/ipe_piscina_antes.jpg", "depois": "output/assets/ipe_piscina_depois.jpg", "titulo": "Implantação da área de lazer e piscina", "desc": "Da obra ao espaço finalizado" },
+      { "antes": "output/assets/ipe_gourmet_antes.jpg", "depois": "output/assets/ipe_gourmet_depois.jpg", "titulo": "Espaço gourmet e churrasqueira", "desc": "Readequação e acabamento de área de convivência" },
+      { "antes": "output/assets/ipe_jardim_antes.jpg", "depois": "output/assets/ipe_show_jardim_rampa.jpg", "titulo": "Revitalização do jardim", "desc": "Paisagismo, canteiros e acessibilidade" }
+    ],
+    "galeria": [
+      { "img": "output/assets/ipe_show_playground.jpg", "legenda": "Playground" },
+      { "img": "output/assets/ipe_show_piscina2.jpg", "legenda": "Piscina e solário" },
+      { "img": "output/assets/ipe_show_jardim_seixo.jpg", "legenda": "Jardim de seixos" },
+      { "img": "output/assets/ipe_jardim_depois.jpg", "legenda": "Paisagismo iluminado" }
+    ],
+    "nota": "Imagens capturadas a partir de registros em vídeo das obras. Espaços de lazer, acessibilidade e paisagismo que ampliam o bem-estar e valorizam o condomínio."
+  },
+  "frentes": {
+    "label": "Gestão e rotinas",
+    "titulo": "Outras frentes de atuação",
+    "intro": "Para além das obras, a gestão condominial se sustenta em rotinas administrativas conduzidas com método, transparência e atenção às pessoas.",
+    "itens": [
+      { "titulo": "Gestão administrativa", "texto": "Organização de rotinas, documentos, contratos e processos do condomínio." },
+      { "titulo": "Gestão financeira condominial", "texto": "Planejamento orçamentário, controle de despesas e equilíbrio das contas." },
+      { "titulo": "Conservação e valorização patrimonial", "texto": "Zelo permanente pelas áreas comuns e pela preservação do patrimônio." },
+      { "titulo": "Acompanhamento de obras e manutenções", "texto": "Planejamento, supervisão e acompanhamento técnico das intervenções." },
+      { "titulo": "Atendimento a moradores", "texto": "Contato próximo, escuta e mediação para uma convivência harmoniosa." },
+      { "titulo": "Organização de assembleias", "texto": "Convocação, condução e registro das decisões coletivas do condomínio." },
+      { "titulo": "Contratação e gestão de fornecedores", "texto": "Seleção, contratação e acompanhamento de prestadores de serviço." },
+      { "titulo": "Gestão de equipes e terceirizados", "texto": "Coordenação e treinamento de funcionários próprios e terceirizados." }
+    ]
+  },
+  "diferenciais": {
+    "label": "Diferenciais",
+    "titulo": "Diferenciais profissionais",
+    "itens": [
+      { "titulo": "Experiência consolidada em gestão condominial", "texto": "Trajetória de mais de duas décadas em gestão, operações e administração, com atuação contínua como síndica profissional." },
+      { "titulo": "Atuação contínua em condomínios de grande responsabilidade", "texto": "Confiança renovada ao longo de anos e mandatos, com estabilidade e continuidade administrativa." },
+      { "titulo": "Acompanhamento próximo de obras e melhorias", "texto": "Presença ativa do diagnóstico à entrega, garantindo qualidade, segurança e valorização das áreas comuns." },
+      { "titulo": "Foco em transparência, organização e valorização do patrimônio", "texto": "Gestão financeira planejada e prestação de contas clara, sempre orientadas ao cuidado com o patrimônio coletivo." },
+      { "titulo": "Relacionamento próximo com moradores, conselhos e fornecedores", "texto": "Comunicação aberta e capacidade de mediação para uma convivência harmoniosa e decisões bem conduzidas." }
+    ]
+  },
   "encerramento": {
-    "citacao": "Gestão condominial com *responsabilidade, presença* e compromisso com a *valorização do patrimônio*."
+    "eyebrow": "Compromisso",
+    "citacao": "Gestão condominial com *responsabilidade, presença* e compromisso com a *valorização do patrimônio*.",
+    "nome": "Eliane Souza Ferreira",
+    "cargo": "Síndica Profissional",
+    "nota": "Disponível para novas gestões e consultorias",
+    "pdf": "Baixar portfólio completo (PDF)"
   }
 }

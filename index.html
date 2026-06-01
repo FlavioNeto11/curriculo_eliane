@@ -525,8 +525,8 @@ footer.legal{background:#05181c;color:rgba(255,255,255,.4);font-size:11px;text-a
   <div class="vignette"></div>
   <div class="hframe"></div>
   <div class="htop">
-    <span class="k">Portfólio Profissional</span>
-    <span class="k">Gestão Condominial</span>
+    <span class="k" data-k="hero.topo_esq">Portfólio Profissional</span>
+    <span class="k" data-k="hero.topo_dir">Gestão Condominial</span>
   </div>
   <div class="hbody">
     <div class="kick" data-k="hero.kick">Apresentação profissional</div>
@@ -537,9 +537,9 @@ footer.legal{background:#05181c;color:rgba(255,255,255,.4);font-size:11px;text-a
     <div class="hcta">
       <a class="btn btn-gold" data-wa href="https://wa.me/5516997382936?text=Ol%C3%A1%20Eliane%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 1-11.6 7.1L4 20l1-4.2A8 8 0 1 1 20 12z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5"/></svg>
-        Falar no WhatsApp
+        <span data-k="hero.cta1">Falar no WhatsApp</span>
       </a>
-      <a class="btn btn-ghost" href="#apresentacao">Conhecer o trabalho</a>
+      <a class="btn btn-ghost" data-k="hero.cta2" href="#apresentacao">Conhecer o trabalho</a>
     </div>
   </div>
   <div class="scroll-cue"><span>Role</span><span class="ln"></span></div>
@@ -547,7 +547,7 @@ footer.legal{background:#05181c;color:rgba(255,255,255,.4);font-size:11px;text-a
 
 <!-- MARQUEE -->
 <div class="marquee" aria-hidden="true">
-  <div class="track">
+  <div class="track" id="mq">
     <span>Gestão Condominial</span><span>Transparência</span><span>Valorização Patrimonial</span><span>Obras &amp; Melhorias</span><span>Atendimento Próximo</span><span>Gestão Financeira</span>
     <span>Gestão Condominial</span><span>Transparência</span><span>Valorização Patrimonial</span><span>Obras &amp; Melhorias</span><span>Atendimento Próximo</span><span>Gestão Financeira</span>
   </div>
@@ -556,7 +556,7 @@ footer.legal{background:#05181c;color:rgba(255,255,255,.4);font-size:11px;text-a
 <!-- 01 APRESENTAÇÃO -->
 <section id="apresentacao">
   <div class="wrap">
-    <div class="sec-head reveal"><div class="sec-num">01</div><div class="sec-label">Apresentação</div><h2 class="sec-title">Quem conduz a gestão</h2></div>
+    <div class="sec-head reveal"><div class="sec-num">01</div><div class="sec-label" data-k="apresentacao.label">Apresentação</div><h2 class="sec-title" data-k="apresentacao.titulo">Quem conduz a gestão</h2></div>
     <div class="intro reveal">
       <p class="big" data-k="apresentacao.destaque">Uma administração <b>próxima, transparente</b> e comprometida com o patrimônio.</p>
       <p class="drop" data-k="apresentacao.p1">Eliane Souza Ferreira atua como Síndica Profissional com trajetória consolidada em gestão condominial e ampla vivência em administração, operações e gestão de pessoas. Seu trabalho é orientado pela proximidade: o contato direto com cada morador constrói a confiança e a transparência de uma administração aberta, em que todos podem participar e contribuir.</p>
@@ -576,25 +576,25 @@ footer.legal{background:#05181c;color:rgba(255,255,255,.4);font-size:11px;text-a
 <!-- 02 EXPERIÊNCIA -->
 <section id="experiencia" class="alt">
   <div class="wrap">
-    <div class="sec-head reveal"><div class="sec-num">02</div><div class="sec-label">Experiência</div><h2 class="sec-title">Experiência em gestão condominial</h2></div>
-    <p class="lead reveal" style="margin-bottom:28px;">Atuação contínua à frente de condomínios de grande responsabilidade, com gestão administrativa, financeira e operacional orientada à conservação e à valorização do patrimônio.</p>
+    <div class="sec-head reveal"><div class="sec-num">02</div><div class="sec-label" data-k="experiencia.label">Experiência</div><h2 class="sec-title" data-k="experiencia.titulo">Experiência em gestão condominial</h2></div>
+    <p class="lead reveal" data-k="experiencia.intro" style="margin-bottom:28px;">Atuação contínua à frente de condomínios de grande responsabilidade, com gestão administrativa, financeira e operacional orientada à conservação e à valorização do patrimônio.</p>
     <div class="exp-grid">
     <article class="fcard reveal">
-      <div class="badge"><span class="bn" data-k="experiencia.0.badge">Desde&nbsp;2017</span><span class="bl" data-k="experiencia.0.selo">Atuação atual</span></div>
-      <div class="body"><div class="role">Síndica Profissional</div><h3 data-k="experiencia.0.titulo">Condomínio Parque Amarige</h3>
-        <p data-k="experiencia.0.descricao">Responsável pela operação e pelo suporte técnico, com supervisão de serviços terceirizados e contato direto com os condôminos. Conduz o treinamento de equipes e o planejamento das manutenções prediais, zelando pela convivência harmoniosa.</p>
+      <div class="badge"><span class="bn" data-k="experiencia.itens.0.badge">Desde&nbsp;2017</span><span class="bl" data-k="experiencia.itens.0.selo">Atuação atual</span></div>
+      <div class="body"><div class="role">Síndica Profissional</div><h3 data-k="experiencia.itens.0.titulo">Condomínio Parque Amarige</h3>
+        <p data-k="experiencia.itens.0.descricao">Responsável pela operação e pelo suporte técnico, com supervisão de serviços terceirizados e contato direto com os condôminos. Conduz o treinamento de equipes e o planejamento das manutenções prediais, zelando pela convivência harmoniosa.</p>
         <div class="tags"><span class="tag">Operação</span><span class="tag">Manutenção predial</span><span class="tag">Relacionamento</span></div></div>
     </article>
     <article class="fcard reveal">
-      <div class="badge"><span class="bn" data-k="experiencia.1.badge">04</span><span class="bl" data-k="experiencia.1.selo">Mandatos</span></div>
-      <div class="body"><div class="role">Síndica Profissional</div><h3 data-k="experiencia.1.titulo">Condomínio Shopping do Carmo</h3>
-        <p data-k="experiencia.1.descricao">Confiança renovada ao longo de quatro mandatos. Responsável pela manutenção interna e externa, pelos pagamentos e pelo planejamento, assegurando continuidade administrativa e cuidado com as áreas comuns.</p>
+      <div class="badge"><span class="bn" data-k="experiencia.itens.1.badge">04</span><span class="bl" data-k="experiencia.itens.1.selo">Mandatos</span></div>
+      <div class="body"><div class="role">Síndica Profissional</div><h3 data-k="experiencia.itens.1.titulo">Condomínio Shopping do Carmo</h3>
+        <p data-k="experiencia.itens.1.descricao">Confiança renovada ao longo de quatro mandatos. Responsável pela manutenção interna e externa, pelos pagamentos e pelo planejamento, assegurando continuidade administrativa e cuidado com as áreas comuns.</p>
         <div class="tags"><span class="tag">Continuidade</span><span class="tag">Manutenção</span><span class="tag">Planejamento</span></div></div>
     </article>
     <article class="fcard reveal">
-      <div class="badge"><span class="bn" data-k="experiencia.2.badge">10</span><span class="bl" data-k="experiencia.2.selo">Anos de atuação</span></div>
-      <div class="body"><div class="role">Síndica Profissional</div><h3 data-k="experiencia.2.titulo">Condomínio Ulisses dos Santos Ribeiro</h3>
-        <p data-k="experiencia.2.descricao">Uma década à frente da gestão, com foco em organização administrativa, conservação das áreas comuns e relacionamento próximo com os moradores — base de uma administração estável e de confiança.</p>
+      <div class="badge"><span class="bn" data-k="experiencia.itens.2.badge">10</span><span class="bl" data-k="experiencia.itens.2.selo">Anos de atuação</span></div>
+      <div class="body"><div class="role">Síndica Profissional</div><h3 data-k="experiencia.itens.2.titulo">Condomínio Ulisses dos Santos Ribeiro</h3>
+        <p data-k="experiencia.itens.2.descricao">Uma década à frente da gestão, com foco em organização administrativa, conservação das áreas comuns e relacionamento próximo com os moradores — base de uma administração estável e de confiança.</p>
         <div class="tags"><span class="tag">Gestão</span><span class="tag">Conservação</span><span class="tag">Transparência</span></div></div>
     </article>
     </div>
@@ -604,8 +604,8 @@ footer.legal{background:#05181c;color:rgba(255,255,255,.4);font-size:11px;text-a
 <!-- 03 TRAJETÓRIA -->
 <section id="trajetoria">
   <div class="wrap">
-    <div class="sec-head reveal"><div class="sec-num">03</div><div class="sec-label">Trajetória</div><h2 class="sec-title">Trajetória profissional</h2></div>
-    <p class="lead reveal" style="margin-bottom:28px;">Uma base sólida construída em gestão, operações, administração e atendimento — competências que sustentam a atuação como síndica profissional.</p>
+    <div class="sec-head reveal"><div class="sec-num">03</div><div class="sec-label" data-k="trajetoria.label">Trajetória</div><h2 class="sec-title" data-k="trajetoria.titulo">Trajetória profissional</h2></div>
+    <p class="lead reveal" data-k="trajetoria.intro" style="margin-bottom:28px;">Uma base sólida construída em gestão, operações, administração e atendimento — competências que sustentam a atuação como síndica profissional.</p>
     <div class="tl reveal" id="timeline">
       <div class="tlitem"><div class="yr">2000 — 2008</div><h4>COCISA</h4><div class="rolelab">Síndica</div><p>Responsável por toda a parte operacional e técnica do local, pela gestão de pessoas e pelos recursos humanos.</p></div>
       <div class="tlitem"><div class="yr">2006 — 2008</div><h4>Essencial Nutrição</h4><div class="rolelab">Gerente Operacional Júnior por Competências</div><p>Gestão das refeições das unidades (Escandinávia, em Araraquara, e Syngenta, em Matão): cotações e compras de matérias-primas, treinamento de funcionários, atendimento ao cliente, controle de temperaturas, manutenção e conservação dos estabelecimentos e fechamento de folha de pagamento.</p></div>
@@ -619,14 +619,14 @@ footer.legal{background:#05181c;color:rgba(255,255,255,.4);font-size:11px;text-a
 <!-- 04 FORMAÇÃO -->
 <section id="formacao" class="alt">
   <div class="wrap">
-    <div class="sec-head reveal"><div class="sec-num">04</div><div class="sec-label">Capacitação</div><h2 class="sec-title">Formação, cursos e capacitações</h2></div>
-    <div class="ccard reveal"><div class="yrbadge">2021</div><div class="prov">Curso · Sindiconet</div><h3>Gestão condominial — formação completa</h3>
-      <ul class="modlist"><li>Gestão Condominial</li><li>Legislação I, II e III</li><li>Implantação de Condomínio</li><li>Segurança em Condomínio</li><li>Gestão Financeira</li><li>Gestão de RH I e II</li><li>Sustentabilidade</li><li>Condomínio Clube</li><li>Manutenção Predial</li><li>Assembleia</li></ul></div>
-    <div class="ccard reveal"><div class="yrbadge">2017</div><div class="prov">Curso · Sebrae</div><h3>Gestão e planejamento</h3>
-      <ul class="modlist one"><li>Gestão Financeira</li><li>Planejamento Financeiro</li></ul></div>
-    <div class="ccard reveal"><div class="yrbadge">2022</div><div class="prov">Café com Síndico · Palestras</div><h3>Atualização contínua</h3>
-      <p style="margin-bottom:14px;">Participação no ciclo de palestras e debates voltados à gestão condominial, com temas atuais sobre legislação, finanças, segurança e administração.</p>
-      <ul class="palestras">
+    <div class="sec-head reveal"><div class="sec-num">04</div><div class="sec-label" data-k="formacao.label">Capacitação</div><h2 class="sec-title" data-k="formacao.titulo">Formação, cursos e capacitações</h2></div>
+    <div class="ccard reveal"><div class="yrbadge" data-k="formacao.sindiconet.ano">2021</div><div class="prov" data-k="formacao.sindiconet.prov">Curso · Sindiconet</div><h3 data-k="formacao.sindiconet.titulo">Gestão condominial — formação completa</h3>
+      <ul class="modlist" id="mods-sin"><li>Gestão Condominial</li><li>Legislação I, II e III</li><li>Implantação de Condomínio</li><li>Segurança em Condomínio</li><li>Gestão Financeira</li><li>Gestão de RH I e II</li><li>Sustentabilidade</li><li>Condomínio Clube</li><li>Manutenção Predial</li><li>Assembleia</li></ul></div>
+    <div class="ccard reveal"><div class="yrbadge" data-k="formacao.sebrae.ano">2017</div><div class="prov" data-k="formacao.sebrae.prov">Curso · Sebrae</div><h3 data-k="formacao.sebrae.titulo">Gestão e planejamento</h3>
+      <ul class="modlist one" id="mods-seb"><li>Gestão Financeira</li><li>Planejamento Financeiro</li></ul></div>
+    <div class="ccard reveal"><div class="yrbadge" data-k="formacao.cafe.ano">2022</div><div class="prov" data-k="formacao.cafe.prov">Café com Síndico · Palestras</div><h3 data-k="formacao.cafe.titulo">Atualização contínua</h3>
+      <p style="margin-bottom:14px;" data-k="formacao.cafe.texto">Participação no ciclo de palestras e debates voltados à gestão condominial, com temas atuais sobre legislação, finanças, segurança e administração.</p>
+      <ul class="palestras" id="palestras">
         <li><strong>Dr. Rodrigo Karpat</strong> — Questões recorrentes da vida em condomínio e as grandes polêmicas da vida condominial.</li>
         <li><strong>Comgás (Ronaldo Andreos)</strong> — Benefícios do gás natural para o meio ambiente e para o seu condomínio.</li>
         <li><strong>Campseg · Auto Defesa Brasil</strong> — Gestão integrada dos serviços para condomínio.</li>
@@ -639,63 +639,63 @@ footer.legal{background:#05181c;color:rgba(255,255,255,.4);font-size:11px;text-a
 <!-- 05 OBRAS -->
 <section id="obras">
   <div class="wrap">
-    <div class="sec-head reveal"><div class="sec-num">05</div><div class="sec-label">Obras e Melhorias</div><h2 class="sec-title">Transformações que valorizam</h2><div class="sec-sub">Condomínio Parque Amarige</div></div>
-    <p class="obra-intro reveal">Registros de obras e melhorias acompanhadas de perto — do diagnóstico à entrega — com foco em conservação, segurança e valorização das áreas comuns. <em>Arraste para comparar o antes e o depois.</em></p>
-    <div class="ba-grid">
+    <div class="sec-head reveal"><div class="sec-num">05</div><div class="sec-label" data-k="obras_amarige.label">Obras e Melhorias</div><h2 class="sec-title" data-k="obras_amarige.titulo">Transformações que valorizam</h2><div class="sec-sub" data-k="obras_amarige.sub">Condomínio Parque Amarige</div></div>
+    <p class="obra-intro reveal" data-k="obras_amarige.intro">Registros de obras e melhorias acompanhadas de perto — do diagnóstico à entrega — com foco em conservação, segurança e valorização das áreas comuns. <em>Arraste para comparar o antes e o depois.</em></p>
+    <div class="ba-grid" id="ba-amarige">
     <div class="ba-block reveal">
-      <div class="ba-slider" data-slider><img class="before" src="output/assets/pa_paisagismo_antes.jpg" alt="Paisagismo antes"><div class="after-wrap"><img src="output/assets/pa_paisagismo_depois.jpg" alt="Paisagismo depois"></div><span class="ba-tag tag-antes">Antes</span><span class="ba-tag tag-depois">Depois</span><div class="ba-handle"><span class="knob"><svg viewBox="0 0 24 24"><path d="M9 6 4 12l5 6M15 6l5 6-5 6"/></svg></span></div></div>
-      <div class="ba-cap">Revitalização paisagística de área comum<span class="desc">Recuperação e tratamento de jardim</span></div>
+      <div class="ba-slider" data-slider><img class="before" data-img="obras_amarige.antes_depois.0.antes" src="output/assets/pa_paisagismo_antes.jpg" alt="Paisagismo antes"><div class="after-wrap"><img data-img="obras_amarige.antes_depois.0.depois" src="output/assets/pa_paisagismo_depois.jpg" alt="Paisagismo depois"></div><span class="ba-tag tag-antes">Antes</span><span class="ba-tag tag-depois">Depois</span><div class="ba-handle"><span class="knob"><svg viewBox="0 0 24 24"><path d="M9 6 4 12l5 6M15 6l5 6-5 6"/></svg></span></div></div>
+      <div class="ba-cap"><span data-k="obras_amarige.antes_depois.0.titulo">Revitalização paisagística de área comum</span><span class="desc" data-k="obras_amarige.antes_depois.0.desc">Recuperação e tratamento de jardim</span></div>
     </div>
     <div class="ba-block reveal">
-      <div class="ba-slider" data-slider><img class="before" src="output/assets/pa_fachada_antes.jpg" alt="Fachada antes" style="object-position:center 22%;"><div class="after-wrap"><img src="output/assets/pa_fachada_depois.jpg" alt="Fachada depois"></div><span class="ba-tag tag-antes">Antes</span><span class="ba-tag tag-depois">Depois</span><div class="ba-handle"><span class="knob"><svg viewBox="0 0 24 24"><path d="M9 6 4 12l5 6M15 6l5 6-5 6"/></svg></span></div></div>
-      <div class="ba-cap">Pintura e conservação de fachada<span class="desc">Modernização visual e proteção da estrutura</span></div>
+      <div class="ba-slider" data-slider><img class="before" data-img="obras_amarige.antes_depois.1.antes" src="output/assets/pa_fachada_antes.jpg" alt="Fachada antes" style="object-position:center 22%;"><div class="after-wrap"><img data-img="obras_amarige.antes_depois.1.depois" src="output/assets/pa_fachada_depois.jpg" alt="Fachada depois"></div><span class="ba-tag tag-antes">Antes</span><span class="ba-tag tag-depois">Depois</span><div class="ba-handle"><span class="knob"><svg viewBox="0 0 24 24"><path d="M9 6 4 12l5 6M15 6l5 6-5 6"/></svg></span></div></div>
+      <div class="ba-cap"><span data-k="obras_amarige.antes_depois.1.titulo">Pintura e conservação de fachada</span><span class="desc" data-k="obras_amarige.antes_depois.1.desc">Modernização visual e proteção da estrutura</span></div>
     </div>
     </div>
-    <div class="action reveal"><div class="imgwrap"><img data-parallax src="output/assets/pa_manutencao_fachada.jpg" alt="Manutenção de fachada"></div><div class="ov"><div class="s">Acompanhamento de obras</div><div class="t">Manutenção predial e pintura de fachada com equipe técnica especializada</div></div></div>
-    <div class="gallery reveal stagger">
+    <div class="action reveal"><div class="imgwrap"><img data-parallax data-img="obras_amarige.destaque_img" src="output/assets/pa_manutencao_fachada.jpg" alt="Manutenção de fachada"></div><div class="ov"><div class="s" data-k="obras_amarige.destaque_s">Acompanhamento de obras</div><div class="t" data-k="obras_amarige.destaque_t">Manutenção predial e pintura de fachada com equipe técnica especializada</div></div></div>
+    <div class="gallery reveal stagger" id="gal-amarige">
       <div class="gcell"><img src="output/assets/pa_show_entrada.jpg" alt="Entrada"><div class="cap">Entrada e áreas de convivência</div></div>
       <div class="gcell"><img src="output/assets/pa_show_passarela.jpg" alt="Passarela"><div class="cap">Passarela coberta</div></div>
       <div class="gcell"><img src="output/assets/pa_show_bicicletario.jpg" alt="Bicicletário"><div class="cap">Bicicletário coberto</div></div>
       <div class="gcell"><img src="output/assets/pa_show_lazer.jpg" alt="Área de lazer"><div class="cap">Área de lazer coberta</div></div>
     </div>
-    <p class="note reveal">Melhorias voltadas ao conforto, à segurança e à convivência dos moradores.</p>
+    <p class="note reveal" data-k="obras_amarige.nota">Melhorias voltadas ao conforto, à segurança e à convivência dos moradores.</p>
   </div>
 </section>
 
 <!-- 05b OBRAS IPÊ ROXO -->
 <section class="alt">
   <div class="wrap">
-    <div class="sec-head reveal"><div class="sec-num">05</div><div class="sec-label">Obras e Melhorias</div><h2 class="sec-title">Novos espaços de lazer</h2><div class="sec-sub">Condomínio Ipê Roxo</div></div>
-    <div class="ba-grid">
+    <div class="sec-head reveal"><div class="sec-num">05</div><div class="sec-label" data-k="obras_ipe.label">Obras e Melhorias</div><h2 class="sec-title" data-k="obras_ipe.titulo">Novos espaços de lazer</h2><div class="sec-sub" data-k="obras_ipe.sub">Condomínio Ipê Roxo</div></div>
+    <div class="ba-grid" id="ba-ipe">
     <div class="ba-block reveal">
-      <div class="ba-slider" data-slider><img class="before" src="output/assets/ipe_piscina_antes.jpg" alt="Piscina em obra"><div class="after-wrap"><img src="output/assets/ipe_piscina_depois.jpg" alt="Piscina finalizada" style="object-position:center 30%;"></div><span class="ba-tag tag-antes">Antes</span><span class="ba-tag tag-depois">Depois</span><div class="ba-handle"><span class="knob"><svg viewBox="0 0 24 24"><path d="M9 6 4 12l5 6M15 6l5 6-5 6"/></svg></span></div></div>
-      <div class="ba-cap">Implantação da área de lazer e piscina<span class="desc">Da obra ao espaço finalizado</span></div>
-    </div>
-    <div class="ba-block reveal">
-      <div class="ba-slider" data-slider><img class="before" src="output/assets/ipe_gourmet_antes.jpg" alt="Espaço gourmet antes"><div class="after-wrap"><img src="output/assets/ipe_gourmet_depois.jpg" alt="Espaço gourmet depois"></div><span class="ba-tag tag-antes">Antes</span><span class="ba-tag tag-depois">Depois</span><div class="ba-handle"><span class="knob"><svg viewBox="0 0 24 24"><path d="M9 6 4 12l5 6M15 6l5 6-5 6"/></svg></span></div></div>
-      <div class="ba-cap">Espaço gourmet e churrasqueira<span class="desc">Readequação e acabamento de área de convivência</span></div>
+      <div class="ba-slider" data-slider><img class="before" data-img="obras_ipe.antes_depois.0.antes" src="output/assets/ipe_piscina_antes.jpg" alt="Piscina em obra"><div class="after-wrap"><img data-img="obras_ipe.antes_depois.0.depois" src="output/assets/ipe_piscina_depois.jpg" alt="Piscina finalizada" style="object-position:center 30%;"></div><span class="ba-tag tag-antes">Antes</span><span class="ba-tag tag-depois">Depois</span><div class="ba-handle"><span class="knob"><svg viewBox="0 0 24 24"><path d="M9 6 4 12l5 6M15 6l5 6-5 6"/></svg></span></div></div>
+      <div class="ba-cap"><span data-k="obras_ipe.antes_depois.0.titulo">Implantação da área de lazer e piscina</span><span class="desc" data-k="obras_ipe.antes_depois.0.desc">Da obra ao espaço finalizado</span></div>
     </div>
     <div class="ba-block reveal">
-      <div class="ba-slider" data-slider><img class="before" src="output/assets/ipe_jardim_antes.jpg" alt="Jardim antes" style="object-position:center 42%;"><div class="after-wrap"><img src="output/assets/ipe_show_jardim_rampa.jpg" alt="Jardim depois" style="object-position:center 60%;"></div><span class="ba-tag tag-antes">Antes</span><span class="ba-tag tag-depois">Depois</span><div class="ba-handle"><span class="knob"><svg viewBox="0 0 24 24"><path d="M9 6 4 12l5 6M15 6l5 6-5 6"/></svg></span></div></div>
-      <div class="ba-cap">Revitalização do jardim<span class="desc">Paisagismo, canteiros e acessibilidade</span></div>
+      <div class="ba-slider" data-slider><img class="before" data-img="obras_ipe.antes_depois.1.antes" src="output/assets/ipe_gourmet_antes.jpg" alt="Espaço gourmet antes"><div class="after-wrap"><img data-img="obras_ipe.antes_depois.1.depois" src="output/assets/ipe_gourmet_depois.jpg" alt="Espaço gourmet depois"></div><span class="ba-tag tag-antes">Antes</span><span class="ba-tag tag-depois">Depois</span><div class="ba-handle"><span class="knob"><svg viewBox="0 0 24 24"><path d="M9 6 4 12l5 6M15 6l5 6-5 6"/></svg></span></div></div>
+      <div class="ba-cap"><span data-k="obras_ipe.antes_depois.1.titulo">Espaço gourmet e churrasqueira</span><span class="desc" data-k="obras_ipe.antes_depois.1.desc">Readequação e acabamento de área de convivência</span></div>
+    </div>
+    <div class="ba-block reveal">
+      <div class="ba-slider" data-slider><img class="before" data-img="obras_ipe.antes_depois.2.antes" src="output/assets/ipe_jardim_antes.jpg" alt="Jardim antes" style="object-position:center 42%;"><div class="after-wrap"><img data-img="obras_ipe.antes_depois.2.depois" src="output/assets/ipe_show_jardim_rampa.jpg" alt="Jardim depois" style="object-position:center 60%;"></div><span class="ba-tag tag-antes">Antes</span><span class="ba-tag tag-depois">Depois</span><div class="ba-handle"><span class="knob"><svg viewBox="0 0 24 24"><path d="M9 6 4 12l5 6M15 6l5 6-5 6"/></svg></span></div></div>
+      <div class="ba-cap"><span data-k="obras_ipe.antes_depois.2.titulo">Revitalização do jardim</span><span class="desc" data-k="obras_ipe.antes_depois.2.desc">Paisagismo, canteiros e acessibilidade</span></div>
     </div>
     </div>
-    <div class="gallery reveal stagger">
+    <div class="gallery reveal stagger" id="gal-ipe">
       <div class="gcell"><img src="output/assets/ipe_show_playground.jpg" alt="Playground"><div class="cap">Playground</div></div>
       <div class="gcell"><img src="output/assets/ipe_show_piscina2.jpg" alt="Piscina e solário"><div class="cap">Piscina e solário</div></div>
       <div class="gcell"><img src="output/assets/ipe_show_jardim_seixo.jpg" alt="Jardim de seixos"><div class="cap">Jardim de seixos</div></div>
       <div class="gcell"><img src="output/assets/ipe_jardim_depois.jpg" alt="Paisagismo iluminado"><div class="cap">Paisagismo iluminado</div></div>
     </div>
-    <p class="note reveal">Imagens capturadas a partir de registros em vídeo das obras. Espaços de lazer, acessibilidade e paisagismo que ampliam o bem-estar e valorizam o condomínio.</p>
+    <p class="note reveal" data-k="obras_ipe.nota">Imagens capturadas a partir de registros em vídeo das obras. Espaços de lazer, acessibilidade e paisagismo que ampliam o bem-estar e valorizam o condomínio.</p>
   </div>
 </section>
 
 <!-- 06 OUTRAS FRENTES -->
 <section id="atuacao">
   <div class="wrap">
-    <div class="sec-head reveal"><div class="sec-num">06</div><div class="sec-label">Gestão e rotinas</div><h2 class="sec-title">Outras frentes de atuação</h2></div>
-    <p class="lead reveal" style="margin-bottom:28px;">Para além das obras, a gestão condominial se sustenta em rotinas administrativas conduzidas com método, transparência e atenção às pessoas.</p>
-    <div class="fgrid reveal stagger">
+    <div class="sec-head reveal"><div class="sec-num">06</div><div class="sec-label" data-k="frentes.label">Gestão e rotinas</div><h2 class="sec-title" data-k="frentes.titulo">Outras frentes de atuação</h2></div>
+    <p class="lead reveal" data-k="frentes.intro" style="margin-bottom:28px;">Para além das obras, a gestão condominial se sustenta em rotinas administrativas conduzidas com método, transparência e atenção às pessoas.</p>
+    <div class="fgrid reveal stagger" id="frentes">
       <div class="fitem"><div class="ic"><svg viewBox="0 0 24 24"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5"/><path d="M10 13h6M10 16h6"/></svg></div><div><h4>Gestão administrativa</h4><p>Organização de rotinas, documentos, contratos e processos do condomínio.</p></div></div>
       <div class="fitem"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 19V9M9 19V5M14 19v-7M19 19v-11"/><path d="M3 21h18"/></svg></div><div><h4>Gestão financeira condominial</h4><p>Planejamento orçamentário, controle de despesas e equilíbrio das contas.</p></div></div>
       <div class="fitem"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V8l7-4 7 4v13"/><path d="M9 21v-6h6v6"/></svg></div><div><h4>Conservação e valorização patrimonial</h4><p>Zelo permanente pelas áreas comuns e pela preservação do patrimônio.</p></div></div>
@@ -711,8 +711,8 @@ footer.legal{background:#05181c;color:rgba(255,255,255,.4);font-size:11px;text-a
 <!-- 07 DIFERENCIAIS -->
 <section id="diferenciais" class="alt">
   <div class="wrap">
-    <div class="sec-head reveal"><div class="sec-num">07</div><div class="sec-label">Diferenciais</div><h2 class="sec-title">Diferenciais profissionais</h2></div>
-    <div class="reveal stagger">
+    <div class="sec-head reveal"><div class="sec-num">07</div><div class="sec-label" data-k="diferenciais.label">Diferenciais</div><h2 class="sec-title" data-k="diferenciais.titulo">Diferenciais profissionais</h2></div>
+    <div class="reveal stagger" id="difs">
       <div class="diff"><div class="dn">01</div><div class="dc"><h4>Experiência consolidada em gestão condominial</h4><p>Trajetória de mais de duas décadas em gestão, operações e administração, com atuação contínua como síndica profissional.</p></div></div>
       <div class="diff"><div class="dn">02</div><div class="dc"><h4>Atuação contínua em condomínios de grande responsabilidade</h4><p>Confiança renovada ao longo de anos e mandatos, com estabilidade e continuidade administrativa.</p></div></div>
       <div class="diff"><div class="dn">03</div><div class="dc"><h4>Acompanhamento próximo de obras e melhorias</h4><p>Presença ativa do diagnóstico à entrega, garantindo qualidade, segurança e valorização das áreas comuns.</p></div></div>
@@ -728,11 +728,11 @@ footer.legal{background:#05181c;color:rgba(255,255,255,.4);font-size:11px;text-a
   <div class="cframe"></div>
   <div class="inner">
     <div class="mk">&ldquo;</div>
-    <div class="eb">Compromisso</div>
+    <div class="eb" data-k="encerramento.eyebrow">Compromisso</div>
     <p class="quote" data-k="encerramento.citacao">Gestão condominial com <em>responsabilidade, presença</em> e compromisso com a <em>valorização do patrimônio</em>.</p>
     <div class="gline"></div>
-    <div class="who">Eliane Souza Ferreira</div>
-    <div class="crole">Síndica Profissional</div>
+    <div class="who" data-k="encerramento.nome">Eliane Souza Ferreira</div>
+    <div class="crole" data-k="encerramento.cargo">Síndica Profissional</div>
     <div class="contacts">
       <a class="cbtn wa" data-wa href="https://wa.me/5516997382936?text=Ol%C3%A1%20Eliane%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener">
         <span class="ci"><svg viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 1-11.6 7.1L4 20l1-4.2A8 8 0 1 1 20 12z"/></svg></span>
@@ -745,8 +745,8 @@ footer.legal{background:#05181c;color:rgba(255,255,255,.4);font-size:11px;text-a
         <span><span class="lbl">E-mail</span><span class="val" data-k="contato.email">lidossantossouza@gmail.com</span></span></a>
     </div>
     <a class="pdf-link" href="portfolio_eliane_sindica_profissional.pdf" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24"><path d="M12 3v12M7 11l5 4 5-4"/><path d="M5 21h14"/></svg>Baixar portfólio completo (PDF)</a>
-    <div class="contact-note">Disponível para novas gestões e consultorias</div>
+      <svg viewBox="0 0 24 24"><path d="M12 3v12M7 11l5 4 5-4"/><path d="M5 21h14"/></svg><span data-k="encerramento.pdf">Baixar portfólio completo (PDF)</span></a>
+    <div class="contact-note" data-k="encerramento.nota">Disponível para novas gestões e consultorias</div>
   </div>
 </section>
 
@@ -779,9 +779,11 @@ if (window.netlifyIdentity) {
     s = s.replace(/\n/g,'<br>');
     return s;
   }
+  function esc(s){ return String(s==null?'':s); }
   function get(obj, path){
     return path.split('.').reduce(function(o,k){ return (o==null)?null:o[k]; }, obj);
   }
+  function pad2(n){ n=String(n); return n.length<2 ? ('0'+n) : n; }
   function setupNum(el, valStr){
     var m = String(valStr).match(/^(\D*)(\d+)(\D*)$/);
     if(!m){ el.textContent = valStr; return; }
@@ -790,9 +792,26 @@ if (window.netlifyIdentity) {
     el.dataset.to = to;
     if(/^0\d/.test(digits)) el.dataset.pad = digits.length;
     el.dataset.from = to>200 ? (to-30) : 0;
-    el.textContent = pre + (el.dataset.pad ? new Array(+el.dataset.pad+1).join('0') : '0');
+    // valor final como fallback seguro (o contador anima por cima, se rodar depois)
+    el.textContent = pre + (el.dataset.pad ? (new Array(+el.dataset.pad).join('0') + (to%10)) : to);
   }
+  function renderList(id, items, fn){
+    var el = document.getElementById(id);
+    if(!el || !Array.isArray(items) || !items.length) return;
+    el.innerHTML = items.map(fn).join('');
+  }
+  var ICONS = [
+    '<path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5"/><path d="M10 13h6M10 16h6"/>',
+    '<path d="M4 19V9M9 19V5M14 19v-7M19 19v-11"/><path d="M3 21h18"/>',
+    '<path d="M3 21h18"/><path d="M5 21V8l7-4 7 4v13"/><path d="M9 21v-6h6v6"/>',
+    '<path d="M3 12l2-2 4 4 7-7 5 5"/><path d="M14 6h6v6"/>',
+    '<circle cx="9" cy="8" r="3"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5"/><path d="M17 7a3 3 0 010 6M21 20c0-2-1.5-3.5-3.5-4"/>',
+    '<path d="M12 3v4M5 10h14l-1 9H6z"/><path d="M9 10a3 3 0 016 0"/>',
+    '<path d="M8 12l2 2 3-3 3 3 1-1"/><path d="M3 7h18v11H3z"/><path d="M7 7V5h10v2"/>',
+    '<circle cx="8" cy="9" r="2.4"/><circle cx="16" cy="9" r="2.4"/><path d="M3 19c0-2.5 2.2-4 5-4s5 1.5 5 4M13 19c0-2.5 2.2-4 5-4s3 1.2 3 3"/>'
+  ];
   fetch('content.json',{cache:'no-store'}).then(function(r){return r.json();}).then(function(C){
+    // 1) textos / imagens / números (campos fixos)
     document.querySelectorAll('[data-k]').forEach(function(el){
       var v = get(C, el.getAttribute('data-k'));
       if(v==null || v==='') return;
@@ -800,6 +819,36 @@ if (window.netlifyIdentity) {
       if(el.hasAttribute('data-num')){ setupNum(el, v); return; }
       el.innerHTML = rich(v);
     });
+    document.querySelectorAll('[data-img]').forEach(function(el){
+      var v = get(C, el.getAttribute('data-img')); if(v) el.src = v;
+    });
+
+    // 2) listas dinâmicas (adicionar/remover pelo painel)
+    var mq = document.getElementById('mq');
+    if(mq && Array.isArray(C.marquee) && C.marquee.length){
+      var one = C.marquee.map(function(s){ return '<span>'+esc(s)+'</span>'; }).join('');
+      mq.innerHTML = one + one;
+    }
+    renderList('timeline', get(C,'trajetoria.itens'), function(it){
+      return '<div class="tlitem"><div class="yr">'+esc(it.periodo)+'</div><h4>'+esc(it.empresa)+'</h4><div class="rolelab">'+esc(it.cargo)+'</div><p>'+rich(it.descricao)+'</p></div>';
+    });
+    var modFn = function(s){ return '<li>'+esc(s)+'</li>'; };
+    renderList('mods-sin', get(C,'formacao.sindiconet.modulos'), modFn);
+    renderList('mods-seb', get(C,'formacao.sebrae.modulos'), modFn);
+    renderList('palestras', get(C,'formacao.cafe.palestras'), function(p){
+      return '<li><strong>'+esc(p.nome)+'</strong> — '+rich(p.texto)+'</li>';
+    });
+    renderList('frentes', get(C,'frentes.itens'), function(it,i){
+      return '<div class="fitem"><div class="ic"><svg viewBox="0 0 24 24">'+ICONS[i % ICONS.length]+'</svg></div><div><h4>'+esc(it.titulo)+'</h4><p>'+rich(it.texto)+'</p></div></div>';
+    });
+    renderList('difs', get(C,'diferenciais.itens'), function(it,i){
+      return '<div class="diff"><div class="dn">'+pad2(i+1)+'</div><div class="dc"><h4>'+esc(it.titulo)+'</h4><p>'+rich(it.texto)+'</p></div></div>';
+    });
+    var galFn = function(g){ return '<div class="gcell"><img src="'+esc(g.img)+'" alt=""><div class="cap">'+esc(g.legenda)+'</div></div>'; };
+    renderList('gal-amarige', get(C,'obras_amarige.galeria'), galFn);
+    renderList('gal-ipe', get(C,'obras_ipe.galeria'), galFn);
+
+    // 3) links de contato
     var wa = (get(C,'contato.whatsapp')||'5516997382936').replace(/\D/g,'');
     var waUrl = 'https://wa.me/'+wa+'?text='+encodeURIComponent('Olá Eliane, vi seu portfólio e gostaria de conversar.');
     document.querySelectorAll('[data-wa]').forEach(function(a){ a.href = waUrl; });
