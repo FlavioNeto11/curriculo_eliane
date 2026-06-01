@@ -12,8 +12,8 @@ locale: "pt"
 # Mensagem de commit ao salvar
 publish_mode: simple
 
-site_url: https://flavioneto11.github.io/curriculo_eliane/
-display_url: https://flavioneto11.github.io/curriculo_eliane/
+site_url: https://helpful-frangipane-039d97.netlify.app/
+display_url: https://helpful-frangipane-039d97.netlify.app/
 
 collections:
   - name: "site"
