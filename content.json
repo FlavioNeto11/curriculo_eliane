@@ -7,7 +7,7 @@
   "hero": {
     "kick": "Apresentação profissional",
     "cargo": "Síndica Profissional",
-    "subtitulo": "Gestão condominial com experiência, transparência e foco em valorização patrimonial.",
+    "subtitulo": "Gestão condominial com experiência, transparência e foco em valorização patrimonial 2.",
     "imagem": "output/assets/cover.jpg"
   },
   "apresentacao": {
@@ -18,10 +18,22 @@
     "citacao": "Um condomínio saudável nasce de uma gestão planejada, próxima das pessoas e transparente em cada decisão."
   },
   "numeros": [
-    { "valor": "+20", "texto": "**anos** de atuação profissional em gestão, operações e administração" },
-    { "valor": "10", "texto": "**anos** à frente do Condomínio Ulisses dos Santos Ribeiro" },
-    { "valor": "2017", "texto": "síndica do **Parque Amarige** desde então — atuação atual" },
-    { "valor": "04", "texto": "**mandatos** no Condomínio Shopping do Carmo" }
+    {
+      "valor": "+20",
+      "texto": "**anos** de atuação profissional em gestão, operações e administração"
+    },
+    {
+      "valor": "10",
+      "texto": "**anos** à frente do Condomínio Ulisses dos Santos Ribeiro"
+    },
+    {
+      "valor": "2017",
+      "texto": "síndica do **Parque Amarige** desde então — atuação atual"
+    },
+    {
+      "valor": "04",
+      "texto": "**mandatos** no Condomínio Shopping do Carmo"
+    }
   ],
   "experiencia": [
     {
