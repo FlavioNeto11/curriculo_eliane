@@ -428,7 +428,7 @@ footer.legal{background:#05181c;color:rgba(255,255,255,.4);font-size:11px;text-a
   .big{font-size:33px;}
 
   /* experiência — 3 cards verticais lado a lado */
-  .exp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch;}
+  .exp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;align-items:stretch;}
   .exp-grid .fcard{display:block;margin-bottom:0;height:100%;}
   .exp-grid .fcard .badge{flex-direction:row;align-items:center;gap:14px;padding:20px 22px;}
   .exp-grid .fcard .badge::after{left:22px;right:22px;top:auto;bottom:0;width:auto;height:2px;background:linear-gradient(90deg,var(--gold),transparent);}
@@ -479,9 +479,15 @@ footer.legal{background:#05181c;color:rgba(255,255,255,.4);font-size:11px;text-a
   section{padding:120px 0;}
 }
 
+.print-only{ display:none; }
 /* ====================== IMPRESSÃO / PDF (gera a partir da estrutura atual) ====================== */
 @media print{
-  @page{ size:A4; margin:13mm; }
+  @page{ size:A4; margin:12mm 12mm 16mm; }
+  .print-only{ display:block !important; }
+  .print-cover{ width:100%; height:58mm; object-fit:cover; border-radius:3mm; margin-bottom:5mm; }
+  .print-foot{ position:fixed; left:0; right:0; bottom:5mm; text-align:center; font-size:8pt; letter-spacing:.04em; color:#7C828B; }
+  .print-foot span{ color:#11414A; font-weight:600; }
+  #obras, .closing{ page-break-before:always; }
   html,body{ background:#fff !important; }
   body{ font-size:10pt; color:#23282E; }
   body::after{ display:none !important; }
@@ -615,6 +621,7 @@ footer.legal{background:#05181c;color:rgba(255,255,255,.4);font-size:11px;text-a
 
 <!-- HERO -->
 <section class="hero" id="hero">
+  <img class="print-only print-cover" data-img="hero.imagem" alt="">
   <div class="bg" id="heroBg" data-k="hero.imagem" data-bg></div>
   <div class="vignette"></div>
   <div class="hframe"></div>
@@ -658,7 +665,7 @@ footer.legal{background:#05181c;color:rgba(255,255,255,.4);font-size:11px;text-a
       <p data-k="apresentacao.p3">Da rotina administrativa ao acompanhamento de obras e manutenções, do relacionamento com fornecedores à condução de assembleias, sua atuação une organização, responsabilidade e compromisso com resultados concretos.</p>
       <blockquote class="pullquote" data-k="apresentacao.citacao">Um condomínio saudável nasce de uma gestão planejada, próxima das pessoas e transparente em cada decisão.</blockquote>
     </div>
-    <div class="stats reveal stagger">
+    <div class="stats reveal stagger" id="stats">
       <div class="stat"><div class="n" data-num data-k="numeros.0.valor" data-to="20" data-prefix="+">+0</div><div class="t" data-k="numeros.0.texto"><strong>anos</strong> de atuação profissional em gestão, operações e administração</div></div>
       <div class="stat"><div class="n" data-num data-k="numeros.1.valor" data-to="10">0</div><div class="t" data-k="numeros.1.texto"><strong>anos</strong> à frente do Condomínio Ulisses dos Santos Ribeiro</div></div>
       <div class="stat"><div class="n" data-num data-k="numeros.2.valor" data-to="2017" data-from="1990">0</div><div class="t" data-k="numeros.2.texto">síndica do <strong>Parque Amarige</strong> desde então — atuação atual</div></div>
@@ -672,7 +679,7 @@ footer.legal{background:#05181c;color:rgba(255,255,255,.4);font-size:11px;text-a
   <div class="wrap">
     <div class="sec-head reveal"><div class="sec-num">02</div><div class="sec-label" data-k="experiencia.label">Experiência</div><h2 class="sec-title" data-k="experiencia.titulo">Experiência em gestão condominial</h2></div>
     <p class="lead reveal" data-k="experiencia.intro" style="margin-bottom:28px;">Atuação contínua à frente de condomínios de grande responsabilidade, com gestão administrativa, financeira e operacional orientada à conservação e à valorização do patrimônio.</p>
-    <div class="exp-grid">
+    <div class="exp-grid reveal stagger" id="exp">
     <article class="fcard reveal">
       <div class="badge"><span class="bn" data-k="experiencia.itens.0.badge">Desde&nbsp;2017</span><span class="bl" data-k="experiencia.itens.0.selo">Atuação atual</span></div>
       <div class="body"><div class="role">Síndica Profissional</div><h3 data-k="experiencia.itens.0.titulo">Condomínio Parque Amarige</h3>
@@ -735,7 +742,7 @@ footer.legal{background:#05181c;color:rgba(255,255,255,.4);font-size:11px;text-a
   <div class="wrap">
     <div class="sec-head reveal"><div class="sec-num">05</div><div class="sec-label" data-k="obras_amarige.label">Obras e Melhorias</div><h2 class="sec-title" data-k="obras_amarige.titulo">Transformações que valorizam</h2><div class="sec-sub" data-k="obras_amarige.sub">Condomínio Parque Amarige</div></div>
     <p class="obra-intro reveal" data-k="obras_amarige.intro">Registros de obras e melhorias acompanhadas de perto — do diagnóstico à entrega — com foco em conservação, segurança e valorização das áreas comuns. <em>Arraste para comparar o antes e o depois.</em></p>
-    <div class="ba-grid" id="ba-amarige">
+    <div class="ba-grid reveal stagger" id="ba-amarige">
     <div class="ba-block reveal">
       <div class="ba-slider" data-slider><img class="before" data-img="obras_amarige.antes_depois.0.antes" src="output/assets/pa_paisagismo_antes.jpg" alt="Paisagismo antes"><div class="after-wrap"><img data-img="obras_amarige.antes_depois.0.depois" src="output/assets/pa_paisagismo_depois.jpg" alt="Paisagismo depois"></div><span class="ba-tag tag-antes">Antes</span><span class="ba-tag tag-depois">Depois</span><div class="ba-handle"><span class="knob"><svg viewBox="0 0 24 24"><path d="M9 6 4 12l5 6M15 6l5 6-5 6"/></svg></span></div></div>
       <div class="ba-cap"><span data-k="obras_amarige.antes_depois.0.titulo">Revitalização paisagística de área comum</span><span class="desc" data-k="obras_amarige.antes_depois.0.desc">Recuperação e tratamento de jardim</span></div>
@@ -760,7 +767,7 @@ footer.legal{background:#05181c;color:rgba(255,255,255,.4);font-size:11px;text-a
 <section class="alt">
   <div class="wrap">
     <div class="sec-head reveal"><div class="sec-num">05</div><div class="sec-label" data-k="obras_ipe.label">Obras e Melhorias</div><h2 class="sec-title" data-k="obras_ipe.titulo">Novos espaços de lazer</h2><div class="sec-sub" data-k="obras_ipe.sub">Condomínio Ipê Roxo</div></div>
-    <div class="ba-grid" id="ba-ipe">
+    <div class="ba-grid reveal stagger" id="ba-ipe">
     <div class="ba-block reveal">
       <div class="ba-slider" data-slider><img class="before" data-img="obras_ipe.antes_depois.0.antes" src="output/assets/ipe_piscina_antes.jpg" alt="Piscina em obra"><div class="after-wrap"><img data-img="obras_ipe.antes_depois.0.depois" src="output/assets/ipe_piscina_depois.jpg" alt="Piscina finalizada" style="object-position:center 30%;"></div><span class="ba-tag tag-antes">Antes</span><span class="ba-tag tag-depois">Depois</span><div class="ba-handle"><span class="knob"><svg viewBox="0 0 24 24"><path d="M9 6 4 12l5 6M15 6l5 6-5 6"/></svg></span></div></div>
       <div class="ba-cap"><span data-k="obras_ipe.antes_depois.0.titulo">Implantação da área de lazer e piscina</span><span class="desc" data-k="obras_ipe.antes_depois.0.desc">Da obra ao espaço finalizado</span></div>
@@ -850,6 +857,8 @@ footer.legal{background:#05181c;color:rgba(255,255,255,.4);font-size:11px;text-a
   <svg viewBox="0 0 32 32"><path d="M16 3C9 3 3.5 8.5 3.5 15.5c0 2.3.6 4.4 1.7 6.3L3 29l7.4-2.1c1.8 1 3.9 1.5 6 1.5 7 0 12.5-5.5 12.5-12.5S23 3 16 3zm0 22.7c-1.9 0-3.7-.5-5.2-1.4l-.4-.2-4.4 1.2 1.2-4.3-.3-.4a10 10 0 0 1-1.6-5.4C5.5 9.9 10.2 5.3 16 5.3s10.5 4.6 10.5 10.2S21.8 25.7 16 25.7zm5.8-7.6c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.5-1.6-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.4-.6.1-.2 0-.4 0-.6l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.2 3.4 5.3 4.7.7.3 1.3.5 1.8.6.7.2 1.4.2 1.9.1.6-.1 1.9-.8 2.1-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.2-.6-.4z"/></svg>
 </a>
 
+<div class="print-only print-foot"><span data-k="encerramento.nome">Eliane Souza Ferreira</span> · <span data-k="hero.cargo">Síndica Profissional</span> · <span data-k="contato.telefone">(16) 99738-2936</span> · <span data-k="contato.email">lidossantossouza@gmail.com</span></div>
+
 <!-- Login do administrador (Netlify Identity) -->
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <script>
@@ -904,6 +913,40 @@ if (window.netlifyIdentity) {
     '<path d="M8 12l2 2 3-3 3 3 1-1"/><path d="M3 7h18v11H3z"/><path d="M7 7V5h10v2"/>',
     '<circle cx="8" cy="9" r="2.4"/><circle cx="16" cy="9" r="2.4"/><path d="M3 19c0-2.5 2.2-4 5-4s5 1.5 5 4M13 19c0-2.5 2.2-4 5-4s3 1.2 3 3"/>'
   ];
+  function renderStats(C){
+    var el=document.getElementById('stats'), items=get(C,'numeros');
+    if(!el || !Array.isArray(items) || !items.length) return;
+    el.innerHTML = items.map(function(it){
+      return '<div class="stat"><div class="n" data-num></div><div class="t">'+rich(it.texto)+'</div></div>';
+    }).join('');
+    var ns = el.querySelectorAll('.n');
+    items.forEach(function(it,i){ if(ns[i]) setupNum(ns[i], it.valor); });
+  }
+  function renderExp(C){
+    var el=document.getElementById('exp'), items=get(C,'experiencia.itens');
+    if(!el || !Array.isArray(items) || !items.length) return;
+    var cargo = esc(get(C,'hero.cargo') || 'Síndica Profissional');
+    el.innerHTML = items.map(function(it){
+      var tags = (Array.isArray(it.tags)?it.tags:[]).map(function(t){ return '<span class="tag">'+esc(t)+'</span>'; }).join('');
+      return '<article class="fcard"><div class="badge"><span class="bn">'+esc(it.badge)+'</span><span class="bl">'+esc(it.selo)+'</span></div>'
+        + '<div class="body"><div class="role">'+cargo+'</div><h3>'+esc(it.titulo)+'</h3><p>'+rich(it.descricao)+'</p>'
+        + (tags ? ('<div class="tags">'+tags+'</div>') : '') + '</div></article>';
+    }).join('');
+  }
+  function renderBA(id, items){
+    var el=document.getElementById(id);
+    if(!el || !Array.isArray(items) || !items.length) return;
+    el.innerHTML = items.map(function(it){
+      var pa = it.pos_antes ? (' style="object-position:'+esc(it.pos_antes)+'"') : '';
+      var pd = it.pos_depois ? (' style="object-position:'+esc(it.pos_depois)+'"') : '';
+      return '<div class="ba-block"><div class="ba-slider" data-slider>'
+        + '<img class="before"'+pa+' src="'+esc(it.antes)+'" alt="">'
+        + '<div class="after-wrap"><img'+pd+' src="'+esc(it.depois)+'" alt=""></div>'
+        + '<span class="ba-tag tag-antes">Antes</span><span class="ba-tag tag-depois">Depois</span>'
+        + '<div class="ba-handle"><span class="knob"><svg viewBox="0 0 24 24"><path d="M9 6 4 12l5 6M15 6l5 6-5 6"/></svg></span></div></div>'
+        + '<div class="ba-cap"><span>'+esc(it.titulo)+'</span><span class="desc">'+esc(it.desc)+'</span></div></div>';
+    }).join('');
+  }
   fetch('content.json',{cache:'no-store'}).then(function(r){return r.json();}).then(function(C){
     // 1) textos / imagens / números (campos fixos)
     document.querySelectorAll('[data-k]').forEach(function(el){
@@ -941,6 +984,10 @@ if (window.netlifyIdentity) {
     var galFn = function(g){ return '<div class="gcell"><img src="'+esc(g.img)+'" alt=""><div class="cap">'+esc(g.legenda)+'</div></div>'; };
     renderList('gal-amarige', get(C,'obras_amarige.galeria'), galFn);
     renderList('gal-ipe', get(C,'obras_ipe.galeria'), galFn);
+    renderStats(C);
+    renderExp(C);
+    renderBA('ba-amarige', get(C,'obras_amarige.antes_depois'));
+    renderBA('ba-ipe', get(C,'obras_ipe.antes_depois'));
 
     // 3) links de contato
     var wa = (get(C,'contato.whatsapp')||'5516997382936').replace(/\D/g,'');
@@ -949,12 +996,14 @@ if (window.netlifyIdentity) {
     document.querySelectorAll('[data-tel]').forEach(function(a){ a.href = 'tel:+'+wa; });
     var mail = get(C,'contato.email');
     if(mail) document.querySelectorAll('[data-mail]').forEach(function(a){ a.href = 'mailto:'+mail; });
-  }).catch(function(){ /* mantém o conteúdo padrão do HTML */ });
+  }).catch(function(){ /* mantém o conteúdo padrão do HTML */ })
+    .then(function(){ if(window.__initAll) window.__initAll(); });
 })();
 </script>
 
 <script>
-(function(){
+window.__initAll = function(){
+  if(window.__inited) return; window.__inited = true;
   var doc=document, html=doc.documentElement, body=doc.body;
   doc.getElementById('yr').textContent=new Date().getFullYear();
 
@@ -1063,7 +1112,7 @@ if (window.netlifyIdentity) {
     s.addEventListener('mousedown',start); window.addEventListener('mousemove',move); window.addEventListener('mouseup',end);
     s.addEventListener('touchstart',start,{passive:true}); s.addEventListener('touchmove',move,{passive:false}); s.addEventListener('touchend',end);
   });
-})();
+};
 </script>
 </body>
 </html>

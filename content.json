@@ -46,19 +46,22 @@
         "badge": "Desde 2017",
         "selo": "Atuação atual",
         "titulo": "Condomínio Parque Amarige",
-        "descricao": "Responsável pela operação e pelo suporte técnico, com supervisão de serviços terceirizados e contato direto com os condôminos. Conduz o treinamento de equipes e o planejamento das manutenções prediais, zelando pela convivência harmoniosa."
+        "descricao": "Responsável pela operação e pelo suporte técnico, com supervisão de serviços terceirizados e contato direto com os condôminos. Conduz o treinamento de equipes e o planejamento das manutenções prediais, zelando pela convivência harmoniosa.",
+        "tags": ["Operação", "Manutenção predial", "Relacionamento"]
       },
       {
         "badge": "04",
         "selo": "Mandatos",
         "titulo": "Condomínio Shopping do Carmo",
-        "descricao": "Confiança renovada ao longo de quatro mandatos. Responsável pela manutenção interna e externa, pelos pagamentos e pelo planejamento, assegurando continuidade administrativa e cuidado com as áreas comuns."
+        "descricao": "Confiança renovada ao longo de quatro mandatos. Responsável pela manutenção interna e externa, pelos pagamentos e pelo planejamento, assegurando continuidade administrativa e cuidado com as áreas comuns.",
+        "tags": ["Continuidade", "Manutenção", "Planejamento"]
       },
       {
         "badge": "10",
         "selo": "Anos de atuação",
         "titulo": "Condomínio Ulisses dos Santos Ribeiro",
-        "descricao": "Uma década à frente da gestão, com foco em organização administrativa, conservação das áreas comuns e relacionamento próximo com os moradores — base de uma administração estável e de confiança."
+        "descricao": "Uma década à frente da gestão, com foco em organização administrativa, conservação das áreas comuns e relacionamento próximo com os moradores — base de uma administração estável e de confiança.",
+        "tags": ["Gestão", "Conservação", "Transparência"]
       }
     ]
   },
@@ -120,8 +123,8 @@
     "sub": "Condomínio Parque Amarige",
     "intro": "Registros de obras e melhorias acompanhadas de perto — do diagnóstico à entrega — com foco em conservação, segurança e valorização das áreas comuns. *Arraste para comparar o antes e o depois.*",
     "antes_depois": [
-      { "antes": "output/assets/pa_paisagismo_antes.jpg", "depois": "output/assets/pa_paisagismo_depois.jpg", "titulo": "Revitalização paisagística de área comum", "desc": "Recuperação e tratamento de jardim" },
-      { "antes": "output/assets/pa_fachada_antes.jpg", "depois": "output/assets/pa_fachada_depois.jpg", "titulo": "Pintura e conservação de fachada", "desc": "Modernização visual e proteção da estrutura" }
+      { "antes": "output/assets/pa_paisagismo_antes.jpg", "depois": "output/assets/pa_paisagismo_depois.jpg", "titulo": "Revitalização paisagística de área comum", "desc": "Recuperação e tratamento de jardim", "pos_antes": "", "pos_depois": "" },
+      { "antes": "output/assets/pa_fachada_antes.jpg", "depois": "output/assets/pa_fachada_depois.jpg", "titulo": "Pintura e conservação de fachada", "desc": "Modernização visual e proteção da estrutura", "pos_antes": "center 22%", "pos_depois": "" }
     ],
     "destaque_img": "output/assets/pa_manutencao_fachada.jpg",
     "destaque_s": "Acompanhamento de obras",
@@ -139,9 +142,9 @@
     "titulo": "Novos espaços de lazer",
     "sub": "Condomínio Ipê Roxo",
     "antes_depois": [
-      { "antes": "output/assets/ipe_piscina_antes.jpg", "depois": "output/assets/ipe_piscina_depois.jpg", "titulo": "Implantação da área de lazer e piscina", "desc": "Da obra ao espaço finalizado" },
-      { "antes": "output/assets/ipe_gourmet_antes.jpg", "depois": "output/assets/ipe_gourmet_depois.jpg", "titulo": "Espaço gourmet e churrasqueira", "desc": "Readequação e acabamento de área de convivência" },
-      { "antes": "output/assets/ipe_jardim_antes.jpg", "depois": "output/assets/ipe_show_jardim_rampa.jpg", "titulo": "Revitalização do jardim", "desc": "Paisagismo, canteiros e acessibilidade" }
+      { "antes": "output/assets/ipe_piscina_antes.jpg", "depois": "output/assets/ipe_piscina_depois.jpg", "titulo": "Implantação da área de lazer e piscina", "desc": "Da obra ao espaço finalizado", "pos_antes": "", "pos_depois": "center 30%" },
+      { "antes": "output/assets/ipe_gourmet_antes.jpg", "depois": "output/assets/ipe_gourmet_depois.jpg", "titulo": "Espaço gourmet e churrasqueira", "desc": "Readequação e acabamento de área de convivência", "pos_antes": "", "pos_depois": "" },
+      { "antes": "output/assets/ipe_jardim_antes.jpg", "depois": "output/assets/ipe_show_jardim_rampa.jpg", "titulo": "Revitalização do jardim", "desc": "Paisagismo, canteiros e acessibilidade", "pos_antes": "center 42%", "pos_depois": "center 60%" }
     ],
     "galeria": [
       { "img": "output/assets/ipe_show_playground.jpg", "legenda": "Playground" },

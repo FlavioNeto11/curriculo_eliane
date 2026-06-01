@@ -92,6 +92,7 @@ collections:
                   - { label: "Selo — rótulo", name: "selo", widget: "string" }
                   - { label: "Nome do condomínio", name: "titulo", widget: "string" }
                   - { label: "Descrição", name: "descricao", widget: "text" }
+                  - { label: "Tags", name: "tags", widget: "list", required: false, field: { label: "Tag", name: "tag", widget: "string" } }
 
           - label: "⑦ Trajetória profissional"
             name: "trajetoria"
@@ -171,6 +172,8 @@ collections:
                   - { label: "Foto DEPOIS", name: "depois", widget: "image" }
                   - { label: "Título", name: "titulo", widget: "string" }
                   - { label: "Descrição curta", name: "desc", widget: "string" }
+                  - { label: "Enquadramento ANTES (opcional)", name: "pos_antes", widget: "string", required: false, hint: "Ex.: center 22% — vazio = centralizado" }
+                  - { label: "Enquadramento DEPOIS (opcional)", name: "pos_depois", widget: "string", required: false }
               - { label: "Foto em destaque (faixa)", name: "destaque_img", widget: "image", required: false }
               - { label: "Destaque — etiqueta", name: "destaque_s", widget: "string" }
               - { label: "Destaque — título", name: "destaque_t", widget: "text" }
@@ -202,6 +205,8 @@ collections:
                   - { label: "Foto DEPOIS", name: "depois", widget: "image" }
                   - { label: "Título", name: "titulo", widget: "string" }
                   - { label: "Descrição curta", name: "desc", widget: "string" }
+                  - { label: "Enquadramento ANTES (opcional)", name: "pos_antes", widget: "string", required: false, hint: "Ex.: center 22% — vazio = centralizado" }
+                  - { label: "Enquadramento DEPOIS (opcional)", name: "pos_depois", widget: "string", required: false }
               - label: "Galeria"
                 name: "galeria"
                 widget: "list"
