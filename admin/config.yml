@@ -1,0 +1,82 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Pasta onde as imagens enviadas pelo painel são guardadas
+media_folder: "output/assets"
+public_folder: "/output/assets"
+
+# Idioma da interface
+locale: "pt"
+
+# Mensagem de commit ao salvar
+publish_mode: simple
+
+site_url: https://flavioneto11.github.io/curriculo_eliane/
+display_url: https://flavioneto11.github.io/curriculo_eliane/
+
+collections:
+  - name: "site"
+    label: "Conteúdo do site"
+    delete: false
+    files:
+      - name: "principal"
+        label: "Página principal"
+        file: "content.json"
+        format: "json"
+        description: "Edite os textos, contatos e a imagem de capa do portfólio."
+        fields:
+          - label: "Contato"
+            name: "contato"
+            widget: "object"
+            fields:
+              - { label: "Telefone (como aparece)", name: "telefone", widget: "string" }
+              - { label: "WhatsApp (só números, com DDI 55)", name: "whatsapp", widget: "string", hint: "Exemplo: 5516997382936" }
+              - { label: "E-mail", name: "email", widget: "string" }
+
+          - label: "Capa / Topo"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Texto pequeno (acima do nome)", name: "kick", widget: "string" }
+              - { label: "Cargo", name: "cargo", widget: "string" }
+              - { label: "Frase de destaque", name: "subtitulo", widget: "text" }
+              - { label: "Imagem de capa", name: "imagem", widget: "image", required: false, hint: "Toque para enviar uma nova foto de capa." }
+
+          - label: "Apresentação"
+            name: "apresentacao"
+            widget: "object"
+            fields:
+              - { label: "Frase de destaque", name: "destaque", widget: "text", hint: "Use **assim** para destacar em dourado/negrito." }
+              - { label: "Parágrafo 1", name: "p1", widget: "text" }
+              - { label: "Parágrafo 2", name: "p2", widget: "text" }
+              - { label: "Parágrafo 3", name: "p3", widget: "text" }
+              - { label: "Citação (frase em destaque)", name: "citacao", widget: "text" }
+
+          - label: "Números / Indicadores"
+            name: "numeros"
+            widget: "list"
+            max: 4
+            min: 4
+            label_singular: "Número"
+            summary: "{{fields.valor}} — {{fields.texto}}"
+            fields:
+              - { label: "Número / Valor", name: "valor", widget: "string", hint: "Exemplos: +20, 10, 2017, 04" }
+              - { label: "Texto", name: "texto", widget: "text", hint: "Use **assim** para negrito." }
+
+          - label: "Experiência (condomínios)"
+            name: "experiencia"
+            widget: "list"
+            label_singular: "Condomínio"
+            summary: "{{fields.titulo}}"
+            fields:
+              - { label: "Selo — destaque (ex.: Desde 2017, 04, 10)", name: "badge", widget: "string" }
+              - { label: "Selo — rótulo (ex.: Mandatos)", name: "selo", widget: "string" }
+              - { label: "Nome do condomínio", name: "titulo", widget: "string" }
+              - { label: "Descrição", name: "descricao", widget: "text" }
+
+          - label: "Encerramento"
+            name: "encerramento"
+            widget: "object"
+            fields:
+              - { label: "Frase final", name: "citacao", widget: "text", hint: "Use *assim* para destacar em dourado/itálico." }

@@ -1,0 +1,49 @@
+{
+  "contato": {
+    "telefone": "(16) 99738-2936",
+    "whatsapp": "5516997382936",
+    "email": "lidossantossouza@gmail.com"
+  },
+  "hero": {
+    "kick": "Apresentação profissional",
+    "cargo": "Síndica Profissional",
+    "subtitulo": "Gestão condominial com experiência, transparência e foco em valorização patrimonial.",
+    "imagem": "output/assets/cover.jpg"
+  },
+  "apresentacao": {
+    "destaque": "Uma administração **próxima, transparente** e comprometida com o patrimônio.",
+    "p1": "Eliane Souza Ferreira atua como Síndica Profissional com trajetória consolidada em gestão condominial e ampla vivência em administração, operações e gestão de pessoas. Seu trabalho é orientado pela proximidade: o contato direto com cada morador constrói a confiança e a transparência de uma administração aberta, em que todos podem participar e contribuir.",
+    "p2": "Com atenção permanente à saúde financeira do condomínio, conduz uma gestão de despesas planejadas e equilibradas — que cabem no orçamento dos condôminos e mantêm o patrimônio valorizado e bem cuidado.",
+    "p3": "Da rotina administrativa ao acompanhamento de obras e manutenções, do relacionamento com fornecedores à condução de assembleias, sua atuação une organização, responsabilidade e compromisso com resultados concretos.",
+    "citacao": "Um condomínio saudável nasce de uma gestão planejada, próxima das pessoas e transparente em cada decisão."
+  },
+  "numeros": [
+    { "valor": "+20", "texto": "**anos** de atuação profissional em gestão, operações e administração" },
+    { "valor": "10", "texto": "**anos** à frente do Condomínio Ulisses dos Santos Ribeiro" },
+    { "valor": "2017", "texto": "síndica do **Parque Amarige** desde então — atuação atual" },
+    { "valor": "04", "texto": "**mandatos** no Condomínio Shopping do Carmo" }
+  ],
+  "experiencia": [
+    {
+      "badge": "Desde 2017",
+      "selo": "Atuação atual",
+      "titulo": "Condomínio Parque Amarige",
+      "descricao": "Responsável pela operação e pelo suporte técnico, com supervisão de serviços terceirizados e contato direto com os condôminos. Conduz o treinamento de equipes e o planejamento das manutenções prediais, zelando pela convivência harmoniosa."
+    },
+    {
+      "badge": "04",
+      "selo": "Mandatos",
+      "titulo": "Condomínio Shopping do Carmo",
+      "descricao": "Confiança renovada ao longo de quatro mandatos. Responsável pela manutenção interna e externa, pelos pagamentos e pelo planejamento, assegurando continuidade administrativa e cuidado com as áreas comuns."
+    },
+    {
+      "badge": "10",
+      "selo": "Anos de atuação",
+      "titulo": "Condomínio Ulisses dos Santos Ribeiro",
+      "descricao": "Uma década à frente da gestão, com foco em organização administrativa, conservação das áreas comuns e relacionamento próximo com os moradores — base de uma administração estável e de confiança."
+    }
+  ],
+  "encerramento": {
+    "citacao": "Gestão condominial com *responsabilidade, presença* e compromisso com a *valorização do patrimônio*."
+  }
+}
