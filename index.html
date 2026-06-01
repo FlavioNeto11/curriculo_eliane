@@ -478,6 +478,100 @@ footer.legal{background:#05181c;color:rgba(255,255,255,.4);font-size:11px;text-a
   .hero .hbody{max-width:1200px;}
   section{padding:120px 0;}
 }
+
+/* ====================== IMPRESSÃO / PDF (gera a partir da estrutura atual) ====================== */
+@media print{
+  @page{ size:A4; margin:13mm; }
+  html,body{ background:#fff !important; }
+  body{ font-size:10pt; color:#23282E; }
+  body::after{ display:none !important; }
+
+  /* esconder elementos de navegação/interação */
+  .topbar,.drawer,.dots,.fab,.progress,.scroll-cue,.marquee,.burger,.pdf-link,.hero .hcta,.ba-handle{ display:none !important; }
+
+  /* tudo visível, sem animações/sombras */
+  .reveal{ opacity:1 !important; transform:none !important; }
+  *{ animation:none !important; transition:none !important; box-shadow:none !important; }
+
+  section{ padding:0 0 7mm 0 !important; }
+  .wrap{ max-width:none !important; padding:0 !important; }
+  .alt{ background:#fff !important; }
+  .sec-num{ display:none !important; }
+  .sec-head{ margin-bottom:5mm; }
+  .sec-title{ font-size:18pt !important; color:#11414A !important; }
+  .sec-label{ color:#B08A4E !important; }
+  .lead,.obra-intro{ font-size:10pt; max-width:none !important; }
+
+  /* textos com gradiente -> cor sólida (imprime mesmo sem 'gráficos de fundo') */
+  .big b,.drop::first-letter,.stat .n,.fcard .badge .bn,.ccard .yrbadge,.diff .dn,.closing .mk,.closing .quote em{
+    -webkit-text-fill-color:#B08A4E !important; color:#B08A4E !important; background:none !important;
+  }
+
+  /* HERO -> cabeçalho claro */
+  .hero{ min-height:auto !important; height:auto !important; display:block !important; background:#fff !important; padding:0 0 5mm !important; }
+  .hero .bg,.hero .vignette,.hero .hframe{ display:none !important; }
+  .hero .htop{ position:static !important; padding:0 0 4mm !important; }
+  .hero .htop .k{ color:#7C828B !important; text-shadow:none !important; }
+  .hero .hbody{ position:static !important; padding:0 !important; max-width:none !important; }
+  .hero .kick{ color:#B08A4E !important; font-size:13pt; }
+  .hero .name{ color:#11414A !important; text-shadow:none !important; font-size:34pt !important; }
+  .hero .name .w{ opacity:1 !important; transform:none !important; }
+  .hero .gline{ background:#B08A4E !important; width:60px !important; animation:none !important; }
+  .hero .role{ color:#11414A !important; }
+  .hero .sub{ color:#535962 !important; font-size:12pt; }
+
+  /* números */
+  .stats{ display:flex !important; gap:4mm !important; }
+  .stat{ background:#fff !important; border:1px solid #E0D9CC !important; padding:3.5mm !important; }
+  .stat::before,.stat::after{ display:none !important; }
+  .stat .t,.stat .t strong{ color:#535962 !important; }
+
+  /* cards claros, sem cortes no meio */
+  .fcard,.ccard,.fitem,.diff,.tlitem,.ba-block,.action,.gcell{ page-break-inside:avoid !important; }
+  .fcard,.ccard,.fitem,.diff{ background:#fff !important; border:1px solid #E0D9CC !important; }
+  .fcard .badge{ background:#11414A !important; }
+  .exp-grid{ display:grid !important; grid-template-columns:1fr 1fr 1fr !important; gap:4mm !important; }
+  .fgrid{ display:grid !important; grid-template-columns:1fr 1fr !important; gap:4mm !important; }
+  #difs{ display:block !important; }
+
+  /* ANTES x DEPOIS lado a lado (mostra as duas imagens inteiras) */
+  .ba-grid{ display:block !important; }
+  .ba-block{ margin-bottom:5mm !important; }
+  .ba-slider{ position:static !important; height:auto !important; aspect-ratio:auto !important; display:flex !important; gap:2mm; border:1px solid #E0D9CC; }
+  .ba-slider .before{ position:static !important; width:50% !important; height:auto !important; object-fit:contain !important; }
+  .ba-slider .after-wrap{ position:static !important; width:50% !important; height:auto !important; overflow:visible !important; border:none !important; }
+  .ba-slider .after-wrap img{ position:static !important; width:100% !important; max-width:100% !important; height:auto !important; object-fit:contain !important; }
+  .ba-tag{ display:none !important; }
+  .ba-cap{ color:#11414A !important; }
+
+  /* faixa de obra */
+  .action{ min-height:auto !important; }
+  .action .imgwrap{ position:static !important; }
+  .action img{ position:static !important; height:auto !important; min-height:auto !important; max-height:78mm; transform:none !important; }
+  .action .ov{ position:static !important; background:none !important; padding:2mm 0 0 !important; }
+  .action .ov .s{ color:#B08A4E !important; }
+  .action .ov .t{ color:#11414A !important; }
+
+  /* galeria */
+  .gallery{ display:grid !important; grid-template-columns:1fr 1fr 1fr 1fr !important; gap:2mm !important; }
+  .gcell{ aspect-ratio:1/1 !important; }
+
+  /* ENCERRAMENTO -> claro */
+  .closing{ background:#fff !important; color:#11414A !important; padding:5mm 0 0 !important; page-break-inside:avoid; }
+  .closing .aurora,.closing .cframe{ display:none !important; }
+  .closing .eb{ color:#B08A4E !important; }
+  .closing .quote{ color:#11414A !important; font-size:16pt !important; }
+  .closing .who{ color:#11414A !important; }
+  .closing .crole{ color:#B08A4E !important; }
+  .closing .contacts{ flex-direction:row !important; max-width:none !important; }
+  .closing .cbtn{ background:#fff !important; border:1px solid #E0D9CC !important; }
+  .closing .cbtn .lbl{ color:#7C828B !important; }
+  .closing .cbtn .val{ color:#11414A !important; }
+  .closing .cbtn .ci{ background:#F6F3ED !important; }
+  .closing .cbtn .ci svg{ stroke:#B08A4E !important; }
+  .contact-note{ color:#7C828B !important; }
+  footer.legal{ background:#fff !important; color:#7C828B !important; }
+}
 </style>
 </head>
 <body>
@@ -744,8 +838,8 @@ footer.legal{background:#05181c;color:rgba(255,255,255,.4);font-size:11px;text-a
         <span class="ci"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
         <span><span class="lbl">E-mail</span><span class="val" data-k="contato.email">lidossantossouza@gmail.com</span></span></a>
     </div>
-    <a class="pdf-link" href="portfolio_eliane_sindica_profissional.pdf" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24"><path d="M12 3v12M7 11l5 4 5-4"/><path d="M5 21h14"/></svg><span data-k="encerramento.pdf">Baixar portfólio completo (PDF)</span></a>
+    <a class="pdf-link" id="btnPrint" href="#" role="button">
+      <svg viewBox="0 0 24 24"><path d="M12 3v12M7 11l5 4 5-4"/><path d="M5 21h14"/></svg><span data-k="encerramento.pdf">Baixar este portfólio em PDF</span></a>
     <div class="contact-note" data-k="encerramento.nota">Disponível para novas gestões e consultorias</div>
   </div>
 </section>
@@ -890,6 +984,10 @@ if (window.netlifyIdentity) {
   }
   burger.addEventListener('click', function(){toggle();});
   drawer.querySelectorAll('a').forEach(function(a){a.addEventListener('click', function(){toggle(false);});});
+
+  // Gerar PDF a partir da estrutura atual do site (impressão -> salvar como PDF)
+  var btnPrint=doc.getElementById('btnPrint');
+  if(btnPrint) btnPrint.addEventListener('click', function(e){ e.preventDefault(); window.print(); });
 
   var reduce = window.matchMedia('(prefers-reduced-motion:reduce)').matches;
 
